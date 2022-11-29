@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Hata denetim işlemleri</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* try (denemek) : Hata oluşturulabilecek kodlar için kulanılır.
+          catch (tutmak) : Hata oluşursa çalıştırılacak kodlar için kullanılır.
+          throw (atmak) : Hata oluşturulabilecek kodlar için istisna durumlarda kullanılır. Kullanıldığı yer önemli.
+          finally(en sonunda) : Hata oluşsa da oluşmasa da çalıştırılacak kodlar için kullanılır. */
+
+        try {
+
+            var isim = "Sara";
+            throw ("değişken tanımlama hatası,soyisim adında değişken yok."); // isim yazdırmadan direkt catch döndürür.
+            document.write(isim + "<br>");
+            document.write(soyisim);
+
+        }
+        catch {
+            document.write("Hata oluştu <br>");
+            document.write(Error);
+            document.write("<br>");
+        }
+        finally {
+            document.write("Hata olsada olmasa da çalışır.");
+        }
+
+    </script>
+</body>

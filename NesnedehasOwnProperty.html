@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // hasOwnProperty : Bir nesnenin parametrik olarak girilen özelliğin kullanılıp kullanılmadığını kontrol ederek boolean veri türünde geriye döndürür.
+        // propertyIsEnumerable : Bir nesnenin parametrik olarak girilen özelliğin kullanılıp kullanılmadığını ve sayılabilir olup olmadığını kontrol eder.
+
+        var icerik = { isim: "sara", soyisim: "gülmez" };
+
+        var isimkontrolet = icerik.hasOwnProperty("isim");
+        document.write(isimkontrolet + "<br>");
+
+        var soyisimkontrolet = icerik.hasOwnProperty("soyisim");
+        document.write(soyisimkontrolet + "<br>");
+
+        var meslekkontrol = icerik.hasOwnProperty("meslek");
+        document.write(meslekkontrol);
+
+
+    </script>
+</body>
+
+</html>

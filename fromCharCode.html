@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Unicode değerini karakter olarak döndürme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // fromCharCode(): Kendisine parametre olarak verilen unicode değerini karakter olarak geriye döndürür.
+        // Çoklu değer alabilir.
+        // (1907) 49 57 48 55 56 
+        // (+ - * ' ") 43 45 42 39 34
+
+        var icerik = "Sara";
+        var icerik2 = 1907;
+        document.write(icerik + "<br>");
+        document.write(icerik2 + "<br>");
+
+        var islem = String.fromCharCode(97, 34);
+        var islem2 = String.fromCharCode(49, 57, 48, 55);
+        document.write(islem + "<br>");
+        document.write(islem2);
+
+
+
+    </script>
+</body>
+
+</html>

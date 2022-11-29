@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // parseInt () : Kendisine parametre olarak verilen değerler doğrultusunda değişken içeriğini tam sayı haline dönüştürür.
+        // rakam,artı işareti,eksi işareti haricinde denk geldiğinde duraklar.
+
+        var degerbir = "0.23";
+        var degeriki = "10.3455";
+        var degeruc = "10 tam sayı";
+        var degerdort = "Fiyat 39.99 lira"; // burada ilk olarak string degere denk gelğinden NaN olarak döndürür.
+
+        var sonucbir = parseInt(degerbir);
+        var sonuciki = parseInt(degeriki);
+        var sonucuc = parseInt(degeruc);
+        var sonucdort = parseInt(degerdort);
+
+        document.write(degerbir + "<br>");
+        document.write(sonucbir + "<br>");
+
+        document.write(degeriki + "<br>");
+        document.write(sonuciki + "<br>");
+
+        document.write(degeruc + "<br>");
+        document.write(sonucuc + "<br>");
+
+        document.write(degerdort + "<br>");
+        document.write(sonucdort + "<br>" + "<br>");
+
+        // Örnek 2
+
+        var sayi = "0x10"; // 16'lık (hexadecimal)
+        var sayiiki = "10"; // 16'lık (hexadecimal)
+        var sayiuc = "10"; // 8'lik (octal)
+
+        var verituru = typeof sayi;
+        var verituruiki = typeof sayiiki;
+        var verituruuc = typeof sayiuc;
+
+        var islem = parseInt(sayi);
+        var islemiki = parseInt(sayiiki, 16);
+        var islemuc = parseInt(sayiuc, 8);
+
+        var sverituru = typeof islem;
+        var sverituruiki = typeof islemiki;
+        var sverituruuc = typeof islemuc;
+
+        document.write(sayi + "(" + verituru + ")" + "<br>");
+        document.write(islem + "(" + sverituru + ")" + "<br>");
+
+        document.write(sayiiki + "(" + verituruiki + ")" + "<br>");
+        document.write(islemiki + "(" + sverituruiki + ")" + "<br>");
+
+        document.write(sayiuc + "(" + verituruuc + ")" + "<br>");
+        document.write(islemuc + "(" + sverituruuc + ")" + "<br>");
+    </script>
+</body>
+
+</html>

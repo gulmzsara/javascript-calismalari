@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // toString () : Nesnenin karakter dizesi olarak temsil edilen halinin değerini geriye döndürür. Nesne prototype kullanılarak değer ataması yapılabilir.
+
+        var bilgiler = { isim: "sara" };
+
+        var sonuc = bilgiler.toString();
+        document.write(sonuc + "<br>"); // [object Object]
+        // Örnek 2 
+
+        function islem() {
+
+        }
+        var sonuc = new islem();
+        document.write(sonuc + "<br>"); // [object Object]
+        // Örnek 3
+        function islem() {
+            this.isim = "sara";
+            document.write(this.isim);
+        }
+        var sonuc = new islem();
+        document.write(sonuc + "<br>"); // sara [object Object] 
+        // Örnek 4 
+        function islem() {
+            this.isim = "sara";
+        }
+        islem.prototype.toString = function () {
+            document.write(this.isim);
+        }
+        var bilgiler = new islem();
+        var sonuc = bilgiler.toString(); // sara
+
+    </script>
+</body>
+
+</html>

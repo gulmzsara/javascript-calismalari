@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // isNaN () : Kendisine parametrik olarak verilen değişken içeriğinin NaN değerinde olup olmadığını boolen veri türünde geriye döndürür.
+
+        var degerbir = "Sara";
+        var degeriki = 5;
+        var degeruc = 0.5;
+        var degerdort = NaN; // sadece bunu true olarak verecek.
+
+        var sonucbir = Number.isNaN(degerbir); // number ifadesini kaldırdıgımızda sayı olmayanları true verecek.
+        var sonuciki = Number.isNaN(degeriki);
+        var sonucuc = Number.isNaN(degeruc);
+        var sonucdort = Number.isNaN(degerdort);
+
+        document.write("değerbir:" + degerbir + "<br>");
+        document.write(sonucbir + "<br>");
+
+        document.write("değeriki:" + degeriki + "<br>");
+        document.write(sonuciki + "<br>");
+
+        document.write("değeruc:" + degeruc + "<br>");
+        document.write(sonucuc + "<br>");
+
+        document.write("değerdort:" + degerdort + "<br>");
+        document.write(sonucdort + "<br>");
+
+
+
+    </script>
+</body>
+
+</html>

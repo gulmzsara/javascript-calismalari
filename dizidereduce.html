@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // reduce(azaltmak) : Kendisine parametre olarak verilen fonksiyonu dizideki her eleman üzerinde soldan sağa doğru çalıştırır.
+        // parametre olarak kullanılan fonksiyon 4 tane parametre gönderirir.
+        // 1.parametre : Dizi içerisinde mevcut değer öncesindeki değerlerin toplamı/birleşimi
+        // 2.parametre : Her işlemde elde edilen dizi elemanıdır.
+        //3.parametre : Her işlemde elde edilen dizi indisidir.
+        //4.parametre :Her tekrarda diziyi tutan referans
+        // reduceRight () : sağdan sola doğru olmak üzere tek tek çalıştırır.
+
+        function deneme(deger, eleman, sıra, degisken) {
+            document.write(deger + "<br>"); // 100,300,600
+            return deger + eleman; // 600+400 :1000
+        }
+        var sayilar = [100, 200, 300, 400];
+        document.write(sayilar + "<br>");
+
+        var islem = sayilar.reduce(deneme);
+        document.write(islem + "<br>");
+        // Örnek 2
+
+        function deneme(deger, eleman, sıra, degisken) {
+            document.write(deger + "<br>"); // 400,700,900 
+            return deger + eleman; // 900+100 :1000
+        }
+        var sayilar = [100, 200, 300, 400];
+        document.write(sayilar + "<br>");
+        var islem = sayilar.reduceRight(deneme);
+        document.write(islem);
+
+
+    </script>
+</body>
+
+</html>

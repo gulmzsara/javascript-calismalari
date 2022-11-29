@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        var bilgiler = { isim: "Sara", soyisim: "Gülmez", yas: "28" }
+
+        delete bilgiler.yas;
+
+        bilgiler.yas = "25";  // Silme işleminden sonra yeni özellik eklenebilir.
+
+        var isimyaz = bilgiler.isim;
+        var soyisimyaz = bilgiler.soyisim;
+        var yasyaz = bilgiler.yas;
+
+        document.write(isimyaz + "<br>");
+        document.write(soyisimyaz + "<br>");
+        document.write(yasyaz);
+
+
+    </script>
+</body>
+
+</html>

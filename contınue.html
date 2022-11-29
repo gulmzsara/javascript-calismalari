@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // continue (devam et) kullanımı: Döngünün o anki işlemini sonlandırarak döngünün başına döner ve o işleme kaldığı yerden devam eder.
+
+        var deger = 1;
+        while (deger <= 10) {
+            document.write(deger + "<br>");
+            if (deger == 5) {
+                deger++;
+                continue;
+            }
+        }
+        // do while
+        var deger = 1;
+        do {
+            document.write(deger + "<br>");
+            if (deger == 5) {
+                deger++;
+                continue;
+            }
+        } while (deger <= 10);
+        // for
+        for (var deger = 1; deger <= 10; deger++) {
+            document.write(deger + "<br>");
+            continue;
+        }
+        // for in
+        var degerler = ["Siyah", "Kırmızı", "Mavi"];
+        var sonuc;
+
+        for (sonuc in degerler) {
+            document.write(degerler[sonuc] + "<br>");
+            if (degerler == 2) {
+                continue;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

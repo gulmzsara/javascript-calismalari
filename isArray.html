@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // isArray () : Bir değişken içeriğinin dizi olup olmadığını kontrol eder. Boolean türünde sonuç döndürür.(true/false)
+        var ornek1 = "Javascript Eğitim Seti";
+        var ornek2 = ["Javascript", "css", "html"];
+        var ornek3 = new Array("javascript", "css", "php");
+        var ornek4 = [];
+        var ornek5 = new Array();
+
+        var sonuc1 = Array.isArray(ornek1);
+        var sonuc2 = Array.isArray(ornek2);
+        var sonuc3 = Array.isArray(ornek3);
+        var sonuc4 = Array.isArray(ornek4);
+        var sonuc5 = Array.isArray(ornek5);
+        document.write("Birinci değişken dizi mi? : " + sonuc1 + "<br>");
+        document.write("ikinci değişken dizi mi? : " + sonuc2 + "<br>");
+        document.write("üçüncü değişken dizi mi? : " + sonuc3 + "<br>");
+        document.write("dördüncü değişken dizi mi?: " + sonuc4 + "<br>");
+        document.write("Beşinci değişken dizi mi? : " + sonuc5 + "<br>");
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // constructor : Nesnenin constructorını elde etmek için kullanılır. Yapıcı metodun değerini geriye döndürür. Aynı zamanda kontrol işlemleri içinde de yer alır.
+        // string bir ifade olarak yazdırır.
+
+        function bilgiler() {
+            isim: "sara";
+        }
+        var sonuc = new bilgiler();
+
+        //  var islem = bilgiler;
+        var islem = sonuc.constructor;
+
+        // var islem = sonuc.constructor == bilgiler;  true değerini döndürür.
+        document.write(islem + "<br>"); // functıon bilgiler(){isim:"sara";}
+
+        // Örnek 2 (if else kullanılarak)
+
+        function bilgi() {
+            isim: "mert";
+        }
+
+        var sonuciki = new bilgi();
+        if (sonuciki.constructor == bilgi) {
+            document.write("Yapıcı metot bilgidir.")
+        } else {
+            document.write("Sonuc farklıdır.")
+        }
+
+
+    </script>
+</body>
+
+</html>

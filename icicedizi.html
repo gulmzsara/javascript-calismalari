@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        var ornek = ["Sara", "Eda", ["Mavi", "Kırmızı", "Beyaz", ["Araba", "uçak"], "yeşil", "sarı"], "Onur"];
+        document.write(ornek + "<br>");
+
+        var sonuc;
+        for (sonuc in ornek) {
+            //   document.write(Array.isArray(ornek[sonuc]) + "<br>"); // elemanların dizi olup olmadığını gösteriyor.
+            if (Array.isArray(ornek[sonuc])) {
+                var ilkkontrol;
+                for (ilkkontrol in ornek[sonuc]) {
+                    if (Array.isArray(ornek[sonuc][ilkkontrol])) {
+                        var sonkontrol;
+                        for (sonkontrol in ornek[sonuc][ilkkontrol]) {
+                            document.write(ornek[sonuc][ilkkontrol][sonkontrol] + "<br>")
+                        }
+                    } else {
+                        document.write(ornek[sonuc][ilkkontrol] + "<br>");
+                    }
+                }
+            } else {
+                document.write(ornek[sonuc] + "<br>");
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

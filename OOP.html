@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // 1. Nesneler : En temel unsurdur. Soyut bir kavramdan ibarettir. Bir isme ve özelliklere sahiptir.
+        // 2. new operatörü kullanarak nesne tanımlama ve çağırma
+        // 3. Fonsiyon ile Nesneyi tanımlama ve çağırma
+        // 4. Nesneleri Dizi gibi görmek
+        // 5. Nesne içerisindeki bir özelliğe ait değerin değiştirilmesi
+        // 6. Nesne içerisinde Fonksiyon tanımlama
+        // 7. Nesne içerisinde özelliğe atanmış fonksiyon içerisinde değişken tanımlama
+        // 8. Nesne içerisinde fonksiyon, fonksiyon içerisinde özellik değer tanımlama
+        // 9. Nesne içerisinde fonksiyon, fonksiyon içerisinde return kullanımı
+        // 10. Nesnelerin kapsama alanı(nesne dışında tanımlanan değişkenleri de yakalayabilirler.)
+        // 11. Nesneye tanımlanan değişken ve özelliklere başka bir özellik ve değer tanımlaması yapmak
+        // 12. Nesne içerisinde tanımlanan fonksiyona parametre tanımlama
+        // 13. Fonksiyon şeklinde Nesne tanımlama(fonksiyon adını nesne olarak tanımlama, parametre kullanılarak)
+        // 14. Fonksiyon parametrelerine yeni değer atamaları eklenmesi       
+
+        var bilgiler = { isim: "Sara", soyisim: "Gülmez", dogumtarihi: 1994 };
+        var kisiadi = bilgiler.isim;
+        var kisisoyadi = bilgiler.soyisim;
+        var kisiyil = bilgiler.dogumtarihi;
+
+        document.write("Adsoyad" + " " + kisiadi + " " + kisisoyadi + "," + "dogumtarihi" + " " + kisiyil + "<br>");
+
+        // Örnek 2
+        var icerik = new Object();
+        icerik.isim = "sara";
+        //      icerik["isim"] = "sara";
+        icerik.soyisim = "Gülmez";
+        //     icerik["soyisim"] = "Gülmez";
+        icerik.yil = 1994;
+        //    icerik["yil"] = 1994;
+
+        var isimyaz = icerik.isim;
+        var soyisimyaz = icerik.soyisim;
+        var tarihyaz = icerik.yil;
+
+        document.write("isim :" + isimyaz + "<br>");
+        document.write("soyisim:" + soyisimyaz + "<br>");
+        document.write("dogumtarihi:" + tarihyaz + "<br>");
+
+        // Örnek 3
+        /*   var nesne = new Object();
+           nesne.isim = "sara";
+           nesne.soyisim = "Gülmez"; */
+
+        function ornek() {
+            this.isim = "Sara";
+            this.soyisim = "Gülmez";
+        }
+        var nesne = new ornek();
+        document.write(nesne.isim + "<br>");
+        document.write(nesne.soyisim + "<br>");
+        // Örnek 3.1
+        var ornek = function () {
+            this.isim = "sara";
+            this.soyisim = "gülmez";
+        }
+        var nesne = new ornek();
+        var isimyaz = nesne.isim;
+        var soyisimyaz = nesne.soyisim;
+        document.write(isimyaz + " " + soyisimyaz + "<br>");
+        // Örnek 4
+        var ornek = { isim: "Saraa", soyisim: "Gülmez" };
+
+        var isimnedir = ornek["isim"];
+        var soyisimnedir = ornek["soyisim"];
+
+        document.write(isimnedir + " " + soyisimnedir + "<br>");
+        // Örnek 5
+        var renk = { birinci: "sarı", ikinci: "beyaz" }; // Eğer değişkene atarsak her ikisi de aynı olur değişme olmaz.
+        document.write(renk.birinci + " " + renk.ikinci + "<br>"); // sarı beyaz
+
+        renk.ikinci = "lacivert";
+        document.write(renk.birinci + " " + renk.ikinci + "<br>"); // sarı lacivert
+        // Örnek 6
+        var icerikler = {
+            isim: "sara", soyisim: "Gülmez", uyarı: function () {
+                alert("Nesne içerisindeki fonksiyon koduyum")
+            }
+        };
+        var isimdegeri = icerikler.isim;
+        var soyisimdegeri = icerikler.soyisim;
+        icerikler.uyarı();
+        document.write(isimdegeri + " " + soyisimdegeri + "<br>");
+        // Örnek 7
+        var bilgiler = {
+            isim: "sara", soyisim: "gülmez", uyarı: function () {
+                var isimdegeri = bilgiler.isim;
+                var soyisimdegeri = bilgiler.soyisim;
+                document.write(isimdegeri + " " + soyisimdegeri + "<br>");
+            }
+        };
+        bilgiler.uyarı();
+        // Örnek 8
+        var bilgiler = {
+            isim: "sara", soyisim: "gülmez", detaylar: function () {
+                this.yas = "28";
+                this.meslek = "Bilgisayar mühendisi";
+            }
+        };
+        var isimyaz = bilgiler.isim;
+        var soyisimyaz = bilgiler.soyisim;
+        bilgiler.detaylar(); // çağrılmadığı zaman yaş ve meslek undefined olur.
+        var yasyaz = bilgiler.yas;
+        var meslekyaz = bilgiler.meslek;
+
+        document.write(isimyaz + " " + soyisimyaz + "<br>");
+        document.write("yaş:" + yasyaz + " " + "meslek: " + meslekyaz + "<br>");
+        // Örnek 9
+        var bilgiler = {
+            detay: function () {
+                var isim = "sara";
+                return isim;
+            }
+        };
+        var isimyaz = bilgiler.detay();
+        document.write(isimyaz + "<br>");
+        // Örnek 10
+        // nesne dışında kullanılan değişken içeriğine erişim sağlanabilir. fonksiyon içerisindeki değişken de dahil 
+        var ad = "sara";
+        var soyad = "gülmez";
+        var metin = "naber"
+        var bilgilerbir = {
+            isim: "sara", soyisim: "gülmez", detay: function () { // isimad,soyisimsoyad,
+                var ifade = "Merhaba"; // var ifade=metin;
+                document.write(ifade + "<br>");
+            }
+        };
+        bilgilerbir.detay();
+        var bilgileriki = {
+            isim: "Ege", soyisim: "Deniz", detay: function () {
+                var ifade = "Selam";
+                document.write(ifade + " ");
+            }
+        };
+        bilgileriki.detay();
+        var isimyaziki = bilgileriki.isim;
+        var isimyazbir = bilgilerbir.isim;
+        document.write(isimyazbir + "<br>");
+        document.write(isimyaziki + "<br>");
+        // Örnek 11
+        var bilgi = { isim: "sara", soyisim: "gülmez" }
+        var isimyaz = bilgi.isim;
+        var soyisimyaz = bilgi.soyisim;
+
+        document.write(isimyaz + " " + soyisimyaz + "<br>");
+
+        bilgi.dogumyeri = "istanbul"; // nesneye yeni özellik ve değer ataması yaptık. functıon da atayabiliriz.
+        bilgi.meslek = "Bilgisayar müh.";
+
+        var dogumyeriyaz = bilgi.dogumyeri;
+        var meslekyaz = bilgi.meslek;
+
+        document.write(dogumyeriyaz + " " + meslekyaz + "<br>");
+        // Örnek 12
+        var icerik = {
+            degerler: function (isim, soyisim, yas) {
+                var isimicerigi = isim;
+                var soyisimicerigi = soyisim;
+                var yasicerigi = yas;
+                var metin = "Benim adımsoyadım:" + isimicerigi + " " + soyisimicerigi + " " + "yaş:" + yasicerigi;
+                return metin;
+            }
+        };
+        var sonuc = icerik.degerler("sara", "gülmez", "28");
+        document.write(sonuc);
+        // Örnek 13
+
+        function ornek(isimdegeri, soyisimdegeri) {
+            this.isim = isimdegeri;
+            this.soyisim = soyisimdegeri;
+
+        }
+
+        var sonuc = new ornek("sara", "gülmez");
+        var gelenisim = sonuc.isim;
+        var gelensoyisim = sonuc.soyisim;
+
+        document.write(gelenisim + " " + gelensoyisim);
+        // Örnek 14
+        function ornek(isim, soyisim, yas) {
+            this.isimdegeri = isim;
+            this.soyisimdegeri = soyisim;
+            this.yasdegeri = yas;
+            this.sonuc = function (yenideger) {
+                this.isimdegeri = yenideger;
+            }
+        }
+        var islem = new ornek("sara", "gülmez", "28");
+        islem.sonuc("Ege");
+        document.write(islem.isimdegeri + "<br>");
+        document.write(islem.soyisimdegeri + "<br>");
+        document.write(islem.yasdegeri);
+
+
+    </script>
+</body>
+
+</html>

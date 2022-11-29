@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // filter () : Kendisine parametre olarak verilen fonksiyonun dizideki true olan tüm elemanlarını kopyalayarak yeni bir dizi oluşturur.
+        function bul(eleman, sira, degisken) {
+            sonuc = eleman;
+            return eleman.length >= 5;
+        }
+
+        var icerik = ["Türkiye", "Almanya", "İtalya", "Rusya", "Roma"];
+        document.write(icerik + "<br>");
+
+        var sonuc = icerik.filter(bul);
+        document.write(sonuc + "<br>");
+        // Örnek 2 
+
+        function bulma(a, sira, degisken) {
+
+            return a % 2 !== 0;
+        }
+
+        var rakam = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write(rakam + "<br>");
+
+        var teksayilar = rakam.filter(bulma);
+        document.write(teksayilar);
+
+    </script>
+</body>
+
+</html>

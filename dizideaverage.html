@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* average (ortalama) : Number veri türündeki dizinin her elemanı üzerinde tek tek olmak üzere çalışır ve tüm elemanların ortalamasını bularak geriye döndürür.
+        Bir nesnenin prototopine etki eder. Dizinin prototip nesnesine iner. */
+
+        Array.prototype.average = function () {
+            var islem = 0;
+            for (var baslagıc = 0; baslangıc < this.length; baslangıc++) {
+                islem += this[baslangıc]; // Bir sonraki değeri üstüne ekleyerek toplar.
+            }
+            var sonuc = islem / this.length;
+            return sonuc;
+
+        }
+
+        var sayilar = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        document.write(sayilar + "<br>");
+
+        var ortalama = sayilar.average();
+        document.write(ortalama);
+
+
+
+    </script>
+</body>
+
+</html>

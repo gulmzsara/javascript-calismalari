@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // $ : Kontrol edilecek değişken içeriğinin sonu ile düzenli ifade arasında bir eşleşme aramak için kullanılır.
+
+        var metin = "Dersimizin konusu javascript";
+        var ifade = new RegExp("javascript$"); // true
+        var islem = ifade.test(metin);
+        document.write(islem);
+
+
+
+    </script>
+</body>
+
+</html>

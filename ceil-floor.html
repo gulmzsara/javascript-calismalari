@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // ceil () : Kendisine parametre olarak verilen değeri yukarı yuvarlayarak değeri geriye döndürür.
+        // floor () : Kendisine parametre olarak verilen ondalıklı sayı değerini aşağı yuvarlayarak geriye döndürür.
+        // round () : Hem aşağı hem yukarı yuvarlama yapar. Kendisine en yakın tam sayıyı kontrol ederek işlemi gerçekleştirir.
+        var sayi = 234.3724;
+
+        var sonuc = Math.ceil(sayi);
+
+        document.write(sayi + "=" + sonuc + "<br>"); // 234.3724=235
+
+        // Örnek 2 
+
+        var deger = 4853.094240;
+        var islem = Math.floor(deger);
+
+        document.write(deger + "=" + islem + "<br>"); //4853 değerini verir. 
+
+        // Örnek 3
+        var bir = 3.12;
+        var iki = 3.49;
+        var uc = 3.51;
+
+        var sonucbir = Math.round(bir);
+        var sonuciki = Math.round(iki);
+        var sonucuc = Math.round(uc);
+
+        document.write(bir + "=" + sonucbir + "<br>"); // 3.12=3
+        document.write(iki + "=" + sonuciki + "<br>"); // 3.49=3
+        document.write(uc + "=" + sonucuc + "<br>"); // 3.51=4
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

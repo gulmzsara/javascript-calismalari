@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Değişkenler</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Değişken: İçerisinde her türlü bilgi, veriyi depolamak için kullanılan alanlara verilen addır.
+        // var -> standart değişken tanımlamakta kullanılır.
+        // let -> blok kapsamlı yerel değişken tanımlar.
+        // const -> sabit değişkenler tanımlamak için kullanılır.
+
+        var a = "Sara ";   // koşulun içerisindeki değişken + son yazılan değişkeni yazdırır.
+        if (true) {
+            var a = "Gülmez";
+            document.write(a);
+        }
+        document.write(a);
+        let b = "Deniz";  // Önce blok içerisindeki değişken sonra blok dışındakini yazdırır.
+        if (true) {
+            let b = "Kaya";
+            document.write(b);
+        }
+        document.write(b);
+        const c = "Eren"; // önce blok içerisindekini sonra bir üsttekini yazdırır.
+        if (true) {
+            const c = "Tunç";
+            document.write(c);
+        }
+        document.write(c);
+    </script>
+</body>
+
+</html>

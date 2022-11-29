@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Boşluk Silme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // trim(): Değişken içeriğin varsa başındaki ve sonundaki tüm boşlukları temizleyerek değeri geri döndürür.
+
+        var ornek = "    javascript       ";
+        var icerik = "Eğitim seti";
+        var sonuc = ornek + icerik;
+        document.write(ornek + icerik + "<br/>");
+        alert(sonuc);
+
+        var islem = ornek.trim();
+        var uyarı = islem + icerik;
+        document.write(islem + icerik);
+        alert(uyarı);
+    </script>
+</body>
+
+</html>

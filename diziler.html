@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Dizi: Bir değişken içerisinde toplanmıs, içerisinde her türden bilgi ve veriyi depolamak için kullanılan sıralı veri türleridir.
+        // index/indisler : herzaman 0 ile başlar.
+
+        // Örnek 1
+        var isimler = ["Sara", "Ege", "Deniz", 4, 5, 'Türkiye\'nin başkenti Ankara\'dır.'];
+        document.write(isimler + "<br>");
+        document.write(isimler[3] + "<br>");
+        // Örnek 2
+        var renkler = new Array("Kırmızı", "Mavi", "Beyaz"), isimler = new Array("Sara", "Deniz");
+        document.write(renkler + "<br>");
+        document.write(isimler[0]);
+        document.write(isimler[1] + "<br>");
+        // Örnek 3
+        var isimler;
+        isimler = ["volkan", "Can"];
+        document.write(isimler + "<br>");
+        // örnek 4 Değişken içeriğini dizi olarak gösterme
+        var deneme = "Javascript programlama dili";
+        document.write(deneme[0]);
+        document.write(deneme[1]);
+        document.write(deneme[2]);
+        document.write(deneme[3] + "<br>");
+        // örnek 5 Değişken şeklinde dizi oluşturma
+        var gunler = new Array(7);
+        gunler[0] = "pazartesi";
+        gunler[1] = "salı";
+        gunler[2] = "çarşamba";
+        gunler[3] = "perşembe";
+        gunler[4] = "cuma";
+        gunler[5] = "cumartesi";
+        gunler[6] = "pazar" + "<br>";
+        document.write(gunler);
+        document.write(gunler[0] + "<br>");
+        document.write(gunler[1] + "<br>");
+        document.write(gunler[2] + "<br>");
+        document.write(gunler[3] + "<br>");
+        document.write(gunler[4] + "<br>");
+        document.write(gunler[5] + "<br>");
+        document.write(gunler[6] + "<br>");
+        // Örnek 6 Dizi içeriğini değiştirme( indislere etki etme)
+        var gunler = [];
+        gunler["Birinci gün"] = "Pazartesi";
+        gunler["İkinci gün"] = "Salı";
+        document.write(gunler["Birinci gün"] + "<br>");
+        document.write(gunler["İkinci gün"] + "<br>" + "<br>");
+        // Örnek 7 
+        var araclar = ["Araba", "uçak", "gemi"];
+        document.write(araclar[0] + "<br>");
+        document.write(araclar[1] + "<br>");
+        document.write(araclar[2] + "<br>" + "<br>");
+        var vasıtalar = ["Araba", "uçak", "gemi"];
+        vasıtalar[2] = "Tren";
+        document.write(vasıtalar[0] + "<br>");
+        document.write(vasıtalar[1] + "<br>");
+        document.write(vasıtalar[2] + "<br>");
+        // Örnek 8 İçiçe Diziler
+        var isimler = ["Sara", "Ege", ["Deniz", "Aslı"], "Onur"];
+        // var isimler=new Array("Sara","Ege",new Array("Deniz","Aslı");
+        document.write(isimler[0] + "<br>");
+        document.write(isimler[1] + "<br>");
+        document.write(isimler[2] + "<br>");
+        document.write(isimler[3] + "<br>");
+
+    </script>
+</body>
+
+</html>

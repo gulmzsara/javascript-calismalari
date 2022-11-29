@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Karakter Bölümleme Metodu</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Split(): Kendisine parametre olarak tanımlanmış değer doğrultusunda değişken içeriğini bölümleyerek yeni bir dizi oluşturur.
+
+        var metin = "Javascript dünyada kullanılan en yaygın script dilidir.";
+        document.write(metin + "<br>");
+        document.write(metin[3] + "<br>");  // Dizin, kaçıncı karakterin hangi harf olduğunu gösteriyor.
+
+        var islem = metin.split(""); // Karakterler arasına virgül atıyor.
+        var islem = metin.split(" ", 3); // Boşluklara virgül atıyor. kaç tane boşluğa koyulacağını 3 rakamı belirliyor.
+        var islem = metin.split("a"); // "a" olan yerlere virgül kullanılıyor. 
+        document.write(islem);
+        document.write(islem[3]); // Dizin, bölümleri sayarak içeriği yazdırıyor.
+
+    </script>
+</body>
+
+</html>

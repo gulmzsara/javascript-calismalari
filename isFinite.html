@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // isFinite () : Değişken içerinin en büyük pozitif ve en küçük negatif sayı aralığında olup olmadığını kontrol ederek boolean veri türünde geriye döndürür.
+
+        var degerbir = 25;
+        var degeriki = 2.345;
+        var degeruc = Number.MAX_VALUE * 2; // pozitif değerin iki katı olacağından false döndürür.
+        var degerdort = -Number.MAx_VALUE * 2;
+
+        var sonucbir = Number.isFinite(degerbir);
+        var sonuciki = Number.isFinite(degeriki);
+        var sonucuc = Number.isFinite(degeruc);
+        var sonucdort = Number.isFinite(degerdort);
+
+        document.write(degerbir + "<br>");
+        document.write(sonucbir + "<br>");
+
+        document.write(degeriki + "<br>");
+        document.write(sonuciki + "<br>");
+
+        document.write(degeruc + "<br>");
+        document.write(sonucuc + "<br>");
+
+        document.write(degerdort + "<br>");
+        document.write(sonucdort + "<br>");
+
+    </script>
+</body>
+
+</html>

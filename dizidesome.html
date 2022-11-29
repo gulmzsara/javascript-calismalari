@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* some (bazı) :  Kendisine parametre olarak belirtilen true değerini döndürene kadar dizi elemanları üzerinde sırasıyla gezinilmesini sağlar.
+        1. parametre : her işlemde elde edilen dizi elemanı
+        2.parametre : her işlemde elde edilen dizi elemanın indisi
+        3.parametre : her tekrarlama işleminde diziyi tutan değişken referansı  */
+
+        function islem(eleman, indis, degisken) {
+            sonuc = eleman;
+            return eleman % 5 == 0;  // sonucu true döndüğü için dizi elemanlarından 5 rakamını verir tam bölündüğü için.
+
+        }
+        var sonuc = 0;
+        var rakamlar = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write(rakamlar + "<br>");
+
+        rakamlar.some(islem);
+        document.write(sonuc + "<br>");
+
+        // Örnek 2
+        function islem(eleman, indis, degisken) {
+            sonuc = eleman;
+            return eleman == "masa";
+        }
+        var sonuc = " ";
+        var esyalar = ["masa", "koltuk", "dolap"];
+        document.write(esyalar + "<br>");
+
+        esyalar.some(islem);
+        document.write(sonuc);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // every (her) : Kendisine parametre olarak belirtilen fonksiyonun false değerini döndürene kadar dizi elemanları üzerinde gezinilmesini sağlar.
+        // metotda kullanılan parametre fonksiyona ototmatik olarak 3 parametre atar. 
+        function islem(eleman, sira, degisken) {
+            sonuc = eleman;
+            return eleman % 4 == 0; // tam bölünme sağlıyor fakat metot false değerini yani tam bölünmeyeni bulup döndürüyor.
+        }
+        var sonuc = 0;
+        var sayilar = [12, 36, 44, 56, 67, 89, 35, 99];
+        document.write(sayilar + "<br>");
+
+        sayilar.every(islem);
+        document.write(sonuc + "<br>");
+
+        // Örnek 2
+        function demo(eleman, sira, degisken) {
+            islemsonuc = eleman;
+            return eleman.length <= 5; // tam bölünme sağlıyor fakat metot false değerini yani tam bölünmeyeni bulup döndürüyor.
+        }
+        var islemsonuc = "";
+        var renkler = ["yesil", "beyaz", "siyah", "mor", "kırmızı"];
+        document.write(renkler + "<br>");
+
+        renkler.every(demo);
+        document.write(islemsonuc);
+
+
+    </script>
+</body>
+
+</html>

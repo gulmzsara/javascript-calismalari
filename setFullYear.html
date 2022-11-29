@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // setFullYear () : Değişken içeriğine yıl bilgisini 1000 ile 9999 arasında olmak üzere depolayarak geriye döndürür.
+        // Çoklu ayarlama işlemi yapılabilir.
+        // setMonth () : Ay bilgisini 0 ile 11 arasında depolayarak geriye döndürür.
+        // setDate () : Ayın gün bilgisini 1 ile 31 arasında depolayarak geriye döndürür.
+        // setHours () : Günün saat bilgisini 0 ile 23 arasında depolayarak geriye döndürür.
+        // setMinutes () : 0 ile 59 arası
+        // setSeconds () : 0 ile 59 arası
+        // setMilliseconds () : 0 ile 999 arasında 
+        /*setUTCFullYear () : Kendisine parametre olarak verilen değer doğrultusunda değişken içeriğine evrensel zaman dilimine ait yıl bilgisini 
+      1000 ile 9999 arasında olmak üzere depolayarak geriye döndürür.*/
+        // setUTCHours () : GMT saat dilimine göre parametre olarak gösterdiğimiz saatten 3 saat ileriyi gösterir.
+
+        var zaman = new Date();
+        zaman.setFullYear(2019, 01, 16); // yıl ay günü set etmek
+        document.write(zaman + "<br>"); // Sat Feb 16 2019 12:55:41
+        // Örnek 2
+        var zamaniki = new Date();
+        zamaniki.setMonth(5, 28);
+        document.write(zamaniki + "<br>");
+
+        // Örnek 3 
+        var zamanuc = new Date();
+        zamanuc.setUTCHours(12);
+        document.write(zamanuc);
+    </script>
+</body>
+
+</html>

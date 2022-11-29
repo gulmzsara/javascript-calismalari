@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // input : Düzenli ifade ile aranan değerin eşleşmesi durumunda değer içeriğinin tümünü geriye döndürür.
+
+        var metin = "Sara Gülmez javascript eğitim seti";
+
+        var ifade = new RegExp("javascript");
+
+        var islem = ifade.test(metin);
+        document.write(islem + "<br>"); // true
+
+        var sonuc = RegExp.input;
+        document.write(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // . : Yeni satır karakteri hariç herhangi birisiyle eşleşme durumudur.
+
+        var metin = "javascript javascript rapor";
+        var ifade = new RegExp("r.p", "g"); // nokta tek karakter alıyor. rip,rap
+        var ifade = new RegExp("j.+t"); // + kullanıldığında birden fazla karakter kullanılır. javascript javascript
+
+        var sonuc = metin.match(ifade);
+        document.write(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>

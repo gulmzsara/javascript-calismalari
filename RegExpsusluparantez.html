@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // {x} : Değişken içeriğinin karakter diziliminde bulunan değerin x defa tekrarlanmış olması gerektiğini belirtmek için kullanılır.
+        // {x,} : Değişken içeriğinin x defa yada daha fazla tekrarlanmış olması gerektiğini belirtmek için kullanılır.
+        var metin = "javaaaaascript eğitim seti";
+        var ifade = new RegExp("a{2}", "g"); // 2 li grup şeklinde yazdırır.
+
+        var islem = metin.match(ifade);
+        document.write(islem + "<br>");
+        // Örnek 2
+
+        var icerik = "javascript eğitim setiiiiiii";
+        var ifadeiki = new RegExp("i{5,}"); // kaç tane varsa hepsini yazdırır. 5 ten sonraki virgül o anlama gelir.
+
+        var sonuc = icerik.match(ifadeiki);
+        document.write(sonuc);
+
+
+    </script>
+</body>
+
+</html>

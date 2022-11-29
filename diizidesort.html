@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // sort (çeşit) : Dizi içeriğinin sıralanmasını sağlar. unicode (evrensel kod) olarak çalışır.
+        // Her bir karakterin değerini kontrol ederek sıralama yapar.
+        // karakter değerlendirmesi yaptığı için fonksiyona 2 parametre gönderir.
+
+        // Türkçe karakterlerin düzgün bir şekilde sıralanması için;
+        function sirala(a, b) {
+
+            var alfabe = "AaBbCcÇçDdEeFfGgĞğHhIıİiJjKkLlMmNnOoÖöPpRrSsUuÜüVvYyZz";
+            if (a.lenght == 0 || b.lenght == 0) { // a ve b'ye gelen parametrenin uzunluğu sıfıra denk ise
+                return a.lenght - b.lenght; // küçükten büyüğe yani a'dan z'ye sırala
+            } else {
+                var bir = alfabe.indexOf(a[0]); // ilk eşleşmeyi yapar.
+                var iki = alfabe.indexOf(b[0]);
+
+                if (bir !== iki) { // ilk eşleşme denk değilse yine a dan z ye sırala
+                    return bir - iki;
+                } else {
+                    return sirala(a.slice(1), b.slice(1)); // ilk indis denk değilse bir sonrakini bul kopyala 
+                }
+
+            }
+        }
+        var isimler = ["sara", "ege", "çağatay", "ümit", "onur"];
+        document.write(isimler + "<br>");
+
+        isimler.sort(sirala);
+        document.write(isimler);
+
+
+        /*
+                function sirala(a, b) {
+                    return a - b; // küçükten büyüğe
+                    return b - a; // büyükten küçüğe
+                    document.write(sirala) */
+
+
+
+
+    </script>
+</body>
+
+</html>

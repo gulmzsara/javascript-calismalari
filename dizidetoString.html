@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // toString() : Dizideki tüm elemanları içeren string veri türünde düz bir metin oluşturur.
+
+        var renk = ["sarı", "kırmızı", "beyaz"];
+        document.write(renk + "<br>");
+        var kontrol = typeof renk;
+        document.write(kontrol + "<br>"); // object (dizi de bir nesne dir)
+
+        var sonuc = renk.toString();
+        document.write(sonuc + "<br>");
+        var sonkontrol = typeof sonuc;
+        document.write(sonkontrol); // string (düz metin)
+
+
+
+    </script>
+</body>
+
+</html>

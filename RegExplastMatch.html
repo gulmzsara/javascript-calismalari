@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // lastmatch : Düzenli ifade ile aranan değerin eşleşmesi durumunda son eşleşmeyi sağlayan değişken içeriğin değerini döndürür.
+
+        var metin = "Kullanılan en yaygın script dili javascriptir. ";
+
+        var ifade = new RegExp("script", "g");
+
+        ifade.test(metin);
+
+        var sonuc = RegExp.lastMatch;
+        document.write(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>

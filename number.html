@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Sayı</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        //Number(): Değişken içeriğini mutlak olarak number(sayı) veri türüne dönüştürerek oluşturduğu değeri geriye döndürür.
+
+        var bir = true;
+        var iki = false;
+        var uc = "8";
+        var dort = "8.5";
+        var bes = new Date();
+
+        document.write(typeof (bir) + ":" + bir + "<br>");
+        document.write(typeof (iki) + ":" + iki + "<br>");
+        document.write(typeof (uc) + ":" + uc + "<br>");
+        document.write(typeof (dort) + ":" + dort + "<br>");
+        document.write(typeof (bes) + ":" + bes + "<br>" + "<br>");
+
+        var yenibir = Number(bir);
+        var yeniiki = Number(iki);
+        var yeniuc = Number(uc);
+        var yenidort = Number(dort);
+        var yenibes = Number(bes);
+
+        document.write(typeof (yenibir) + ":" + yenibir + "<br>");
+        document.write(typeof (yeniiki) + ":" + yeniiki + "<br>");
+        document.write(typeof (yeniuc) + ":" + yeniuc + "<br>");
+        document.write(typeof (yenidort) + ":" + yenidort + "<br>");
+        document.write(typeof (yenibes) + ":" + yenibes + "<br>");
+    </script>
+</body>
+
+</html>

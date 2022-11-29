@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // \ : Ardından gelecek olan karakterin özel karakter olup olmadığını belirtmek için kullanılır.
+        // \w : Karakter diziliminde bulunan değerin harf,rakam veya alt çizgi karakterlerden herhangi biri ile eşleşmesi durumudur.
+        // \W : Harf,rakam veya alt çizgi karakterleri dışında herhangi birisi ile eşleşme durumudur.
+        var metin = "javascript eğitim seti";
+        var ifade = new RegExp("\\S", "g"); // j,a,v,a,s,c,r,i,p,t,e,ğ,i,t,i,m,s,e,t,i
+
+        var sonuc = metin.match(ifade);
+        document.write(sonuc + "<br>");
+        // Örnek 2
+        var ıcerık = "!?*%&(s)[]-/'(a)%&r*a*";
+        var ifadeiki = new RegExp("\\w", "g");
+
+        var islem = ıcerık.match(ifadeiki);
+        document.write(islem);
+
+
+    </script>
+</body>
+
+</html>

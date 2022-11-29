@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // toLocaleString () : Nesnenin tarayıcı diline göre karakter dizesi olarak temsil edilen halinin değerini geriye döndürür.
+        // Nesne degeri üzerinden tarayıcı diline göre özel işlemler yapılabilir. 
+
+        var icerik = 12345;
+        var sonuc = icerik.toLocaleString();
+        document.write(sonuc + "<br>"); // 12.345    tarayıcıya göre binlik ayraç kullanıldı. 
+
+        // Örnek 2
+
+        var deger = 1907;
+        var islem = deger.toLocaleString("eng-US");
+        document.write(islem + "<br>"); // 1,907   tarayıcı diline göre virgül kullanıldı. 
+
+        // Örnek 3
+        var sayi = 1500;
+        var bilgi = sayi.toLocaleString("tr-TR", { style: "currency", currency: "TRY" });
+        document.write(bilgi + "<br>");   //  1.500,00 TL
+
+        // Örnek 4
+        var sayi = 1888;
+        var islem = sayi.toLocaleString("eng-US", { style: "currency", currency: "USD" });
+        document.write(islem); // 1,888.00 $
+    </script>
+</body>
+
+</html>

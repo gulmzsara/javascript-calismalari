@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Date() : Kullanıldığı değişken içerisine tarih ve saat bilgilerini depolayarak geriye döndürür.
+
+        var zaman = new Date(94, 05, 28, 15, 44); // 2 haneli yıl olarak 1994 olur. Ay olarak haziran, gün 28 ve saat 15:44:00
+        document.write(zaman + "<br>");
+        // Örnek 2
+        var zamaniki = new Date("june, 28,1994 12:27");
+        document.write(zamaniki + "<br>" + "<br>");
+        // Örnek 3
+        var zamanuc = new Date();
+        document.write(zamanuc + "<br>");
+
+        var donustur = String(zamanuc);
+        document.write(donustur + "<br>");
+
+        var parcala = donustur.split(" ");
+        document.write(parcala + "<br>");
+
+        var haftagun = parcala[0];
+        if (haftagun == "Wed") {
+            var gunaditr = "Çarşamba";
+        }
+        document.write(gunaditr + "<br>");
+        var ay = parcala[1];
+        document.write(ay + "<br>");
+        var aygun = parcala[2];
+        document.write(aygun + "<br>");
+        var yıl = parcala[3];
+        document.write(yıl + "<br>");
+        var saat = parcala[4];
+        document.write(saat + "<br>");
+        var zamandılımı = parcala[5];
+        document.write(zamandılımı);
+
+    </script>
+</body>
+
+</html>

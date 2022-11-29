@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // isSafeInteger () : Kendisine parametrik olarak verilen değişken içeriğinin güvenli tam sayı olup olmadığını boolean veri türünde döndürür.
+
+        var sayibir = 23849;
+        var sayiiki = 1138923724743 * 654327424623; // işlemin sonucu çok büyük çıktıgından string deger alıyor. o yüzden güvenli olmayıp false döndürür.
+
+
+        var sonucbir = Number.isSafeInteger(sayibir);
+        var sonuciki = Number.isSafeInteger(sayiiki);
+
+        document.write(sayibir + "<br>");
+        document.write(sonucbir + "<br>");
+
+        document.write(sayiiki + "<br>");
+        document.write(sonuciki + "<br>");
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Döngüden cıkmak için kullanılır.
+
+        var baslangıc = 1;
+        // do while döngüsü ile break komutu
+        do {
+            document.write(baslangıc + "<br>");
+            if (baslangıc == 3) {
+                break;
+            }
+            baslangıc++;
+        } while (baslangıc <= 5);
+        // while döngüsü ile break komutu
+        while (baslangıc <= 5) {
+            document.write(baslangıc + "<br>");
+            if (baslangıc == 3) {
+                break;
+            }
+            baslangıc++;
+        }
+        // for döngüsü ile break komutu
+        for (var baslangıc = 1; baslangıc <= 10; baslangıc++) {
+            if (baslangıc == 5) {
+                break;
+            }
+        }
+        // for in döngüsü ile break komutu 
+        var baslangıc = ["siyah", "kırmızı", "beyaz"];
+
+        var sonuc;
+        for (sonuc in baslangıc) {
+            // document.write(sonuc+ "<br>"); dizin sayısını verir.(0,1,2)
+            // document.write(baslangıc+ "<br>"); 3 parametreyi yanyana dizin sayısına göre altalta yazdırır.
+            document.write(baslangıc[sonuc] + "<br>"); // parametreleri alt alta yazdırır.
+            if (sonuc == 1) {   // 0,1 olduğunda (2 parametreyi alt alta yazdıktan sonra döngüden çık)
+                break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>-

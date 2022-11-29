@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // [x] : Değişken içeriğinin karakter diziliminde bulunan değerin belirtilen karakterlerden herhangi biri ile eşleşmesi gerektiğini belirtir.
+        // Her karakter tek tek kontrol ediliyor.
+        // [x-y] : Belirtilen karakter arasında herhangi biri ile eşleşmesi durumudur.
+        // [^x] : Belirtilen değer dışında herhangi birisiyle eşleşme durumudur.
+        // [^x-y] :Belirtilen değer aralığında kalan herhangi birisiyle eşleşme durumudur.
+
+        var metin = "javascript eğitim seti";
+        var ifade = new RegExp("[javascript]", "g"); // j,a,v,a,s,c,r,i,p,t,t,s,t,i (g kullanılmadığında tek karakter eşleşmesi oluyor)
+
+        var sonuc = metin.match(ifade);
+        document.write(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>

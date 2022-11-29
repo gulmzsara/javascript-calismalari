@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // \b : Kontrol edilecek değişken içeriğinin düzenli ifadeye uygun olarak karakter dizilimin başında yada sonunda aramak için kullanılır.
+        // \B : Değişken içeriğinin düzenli ifadeye uygun olarak karakter diziliminde kelimelerin içerisinde aramak için kullanılır.
+
+        var metin = "xsara xsara xsarax";
+        var ifade = new RegExp("sara"); // indis değeri 1 oluyor.
+        var ifade = new RegExp("\\bsara");// böyle bir içerik bulamadığından indis değeri -1 oluyor.
+        var ifade = /sara\b/; //  tek slash kullanılır. indis değeri 1 olur.
+        var islem = metin.search(ifade);
+        document.write(islem + "<br>");
+
+        // Örnek 2
+        var icerik = "sara deufhdfsarasfjeef sara";
+        var ifadeiki = new RegExp("\\Bsara");
+        var sonuc = icerik.search(ifadeiki);
+        document.write(sonuc);
+
+    </script>
+</body>
+
+</html>

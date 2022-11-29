@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>utf-8 kodlamasına dönüşmüş karakterleri çözme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // decodeURIComponent() :Değişken içerisindeki metnin özel karakterlerinin utf-8 kodlamasına dönüşmüş karakterleri çözerek geriye döndürürür.
+        // Bazı özel karakterler ;
+        // (: // ? & - _ = )
+
+        var deger = "http%3A%2F%2Fwww.extraegitim.com%3FEgitimsetiadi%3DJavascript%26Egitmen%3DVolkanAlakent";
+        document.write(deger + "<br>");
+
+        var islem = decodeURIComponent(deger);
+        document.write(islem);
+
+
+    </script>
+</body>
+
+</html>

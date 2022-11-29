@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* for in Döngüsü : Nesnelerde ve dizilerde kullanılır. 
+        1. parametre : Değişken
+        1.parametre : Dizi / Nesne adı  */
+
+        var ornek = ["Sara", "Onur", "Ege"]; // Dizin
+        /* var ornek = [isim: "Sara", soyisim: "Gülmez", dogumtarihi =" 1994"]; Nesne */
+        document.write(ornek + "<br>");
+
+        var sonuc;
+        for (sonuc in ornek) {
+            // Koşul kullanılırsa;
+            if (ornek[sonuc] == "Sara") {
+                document.write("Sara bir yazılım geliştiricisidir." + "<br>");
+            } else if (ornek[sonuc] == "Onur") {
+                document.write("Onur bir stajyerdir.");
+            } else if (ornek[sonuc] == "Ege") {
+                document.write("Ege bir yöneticidir.")
+            }
+            // document.write(ornek[sonuc]); 
+        }
+
+
+
+    </script>
+</body>
+
+</html>

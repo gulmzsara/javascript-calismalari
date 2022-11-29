@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // watch () : Nesnenin belirtilen özelliği değiştiğinde çalıştırılacak olan herhangi bir işlev eklemek için kullanılır. Fonksiyona 3 parametre atanır.
+        // 1.parametre : Özelliğin adı
+        // 2.parametre : Özelliğin eski değeri
+        // 3.parametre : Özelliğin yeni değeri
+        // Unwatch () : Nesnenin belirtilen özelliği değiştiğinde eklenmiş olan iişlevi kaldırmak için kullanılır.
+
+        var bilgiler = { isim: "sara" };
+
+        bilgiler.watch("isim", function (özellikadi, eskideger, yenideger) { // işlev çalıştırmamız için functıon tanımlamamız lazım.
+            var gelenözellikadi = özellikadi;
+            var geleneskideger = eskideger;
+            var gelenyenideger = yenideger;
+
+            var metin = gelenözellikadi + "\n " + geleneskideger + "\n " + gelenyenideger;
+            alert(metin);
+        });
+        bilgiler.isim = "nalan";
+        // Örnek 2
+        var icerik = { isim: "ebru" };
+        icerik.watch("isim", function (ozellikadi, eskideger, yenideger) {
+            var gelenozellikadi = ozellikadi;
+            var geleneskideger = eskideger;
+            var gelenyenideger = yenideger;
+
+            var islem = gelenozellikadi + " \n" + geleneskideger + "\n " + gelenyenideger;
+            alert(islem);
+        });
+        icerik.isim = "hakan";
+        icerik.unwatch("isim"); // kullanıldığında bi sonraki işlev gerçekleşmiyor.
+        icerik.isim = "sara";
+
+    </script>
+</body>
+
+</html>

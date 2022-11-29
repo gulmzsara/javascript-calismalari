@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Değişkenin veri türünü geri döndürme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        var isim = "Sara"; // string
+        var sayi = 1; // number
+        var mantiksal = true; // boolean
+        var isimler = ["Sara,Ege"];// array
+        var nesne = new Object(); //object
+        var tanımsız = undefined; //tanımsız
+        var bos = ""; // null
+
+        var depo1 = isim + ":" + typeof (isim);
+        document.write(depo1 + "<br>");
+        document.write(typeof (isim) + "<br>");
+
+        var depo2 = sayi + ":" + typeof (sayi);
+        document.write(depo2 + "<br>");
+        document.write(typeof (sayi) + "<br>");
+
+        var depo3 = mantiksal + ":" + typeof (mantiksal);
+        document.write(depo3);
+    </script>
+</body>
+
+</html>

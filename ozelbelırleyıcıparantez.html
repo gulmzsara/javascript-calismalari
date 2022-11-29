@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // () : Düzenli ifadelerde grup tanımlamak için kullanılır.
+        // (?:x) : Düzenli ifadelerde altgurup oluşturmak için  kullanılır.
+
+        var metin = "javascript eğitim seti";
+        var ifade = new RegExp("(javascript|eğitim)", "g"); // javascript,eğitim
+        var ifade = new RegExp("(javascript)"); // javascript,javascript
+        var ifade = new RegExp("(j)(a)(v)(a)(s)(c)(r)(i)(p)(t)");// javascript,j,a,v,a,s,c,r,i,p,t
+        var sonuc = metin.match(ifade);
+        document.write(sonuc);
+        // Örnnek 2
+        var ifadeiki = new RegExp("(?:sc)");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // m : Kontrol edilecek değişken içeriğin birden fazla satırı varsa tüm satırların kontrol edilmesini sağlar.
+        // multı-line : m ayarının kullanılıp kullanılmadığını boolean veri türünde kontrol edip sonucu geriye döndürür.
+
+        var metin = "\nSara\nsara\nSARA";
+
+        var ifade = new RegExp("^Sara", "m"); // ^ kullanılıp m ayarı eklendiğinde istenilen değeri yazdırır. 
+
+        var islem = metin.match(ifade);
+        document.write(islem + "<br>");
+        // Örnek 2
+        var icerik = "\nsara\nSara\nSARA";
+
+        var ifadeiki = new RegExp("sara");
+
+        var sonuc = icerik.match(ifadeiki);
+        document.write(sonuc + "<br>");
+
+        var kontrol = ifadeiki.multiline;
+        document.write(kontrol);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        //isPrototypeOf () : Parametrik olarak girilen prptotype nesne zincirinde constructor olup olmadığını kontrol ederek boolean veri türünde döndürür.
+        // Bu yapı dışında herhangi bir yapıcı metot tanımlaması yapılamaz.
+        // istanceOf : Bir nesnenin yapıcı metodunun doğruluğunu kontrol ederek boolean veri türünde geriye döndürür.
+
+        function bilgiler() {
+            isim: "sara";   // Bu özellik olmasa dahi true degerini döndürür.
+        }
+
+        var sonuc = new bilgiler();
+        var kontrolet = bilgiler.prototype.isPrototypeOf(sonuc);
+        document.write(kontrolet);
+
+        // Örnek 2
+        function demobir() {
+
+        }
+        function demoiki() {
+
+        }
+        var islembir = new demobir(); // islembir demobir adındaki yapıca metoda sahiptir.
+        var sonucbir = islembir.istanceof.demobir; // islembir demobir adındaki yapıcı metoda sahip mi?
+        document.write(sonucbir + "<br>"); // true
+
+        var islemiki = new demoiki();
+        var sonuciki = islembir.istanceof.demoiki; // islembir 'in yapıcı metodu demoiki mi? değil !
+        document.write(sonuciki); // false
+
+    </script>
+</body>
+
+</html>

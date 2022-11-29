@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // copywithin () : Dizi aralığında bulunan değerleri kopyalarak parametreler doğrultusunda dizinin elemanlarını değiştirir.
+        // 1.parametre : Hedef
+        // 2.parametre : Başlangıç
+        // 3.parametre : Bitiş
+
+        var isimler = ["sara", "ege", "deniz", "onur", "eda"];
+        document.write(isimler + "<br>");
+
+        isimler.copyWithin(3, 1, 2); // onur yerine ege kopyalanarak diğer elemanlar aynı şekilde yazılır. 2 dahil olmadğından deniz'i alamıyoruz.
+        document.write(isimler);
+
+
+
+
+    </script>
+</body>
+
+</html>

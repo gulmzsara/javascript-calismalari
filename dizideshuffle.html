@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // shuffle (karışık) : Tüm elemanları karıştırarak yeni dizi oluşturur.
+        // functıon atayarak nesnenin prototype na erişilir. (diziyi burda nesne olarak görebiliriz.)
+        // dizi elemanların sayısını alma
+        // dizinin prototype tabanına indiğimiz için diziyi tutan değişken adını yazmak yerine this kullanılır.
+        // bir döngü kullanılır. (while olur)
+        //rastgele sayı üretip karıştırma işlemi yapılır. (math.random)
+        // degeri aşagı yuvarlama metodu (math.floar) degerin tam sayı olması için kullanılır.
+
+        Array.prototype.shuffle = function () {
+            var elemansayisi = this.length;
+            while (--elemansayisi > 0) {
+                var rastgelesayi = Math.floor(Math.random() * (elemansayisi + 1));
+                var gecicideger = this[rastgelesayi];
+                this[rastgelesayi] = this[elemansayisi];
+                this[elemansayisi] = gecicideger;
+                return this;
+            }
+
+        }
+
+        var icerik = ["A", "B", "C", "D"];
+        document.write(icerik + "<br>");
+
+        var karistir = icerik.shuffle();
+        document.write(karistir);
+
+
+    </script>
+</body>
+
+</html>

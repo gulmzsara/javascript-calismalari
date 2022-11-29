@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // getFullYear () : Değişken içeriğine yıl bilgisini 1000 ie 9999 arasında rakamsal olarak depolarayak geriye döndürür.
+        // getMonth () : Değişken içeriğine ay bilgisini 0 ile 11 arasında rakamsal olarak depolayarak geriye döndürür.(ilk ay ocak ve değeri 0'dır)
+        // getDate () : Değişken içeriğine ayın gün bilgisini 1 ile 31 arasında rakamsal olarak depolayarak geriye döndürür.
+        // getDay () : Değişken içeriğine haftanın gün bilgisini o ile 6 arasında rakamsal olarak depolayarak geriye döndürür.
+        // getHours () : Değişken içeriğine günün saat bilgisini 0 ile 23 arasında rakamsal olarak depolayarak geriye döndürür.
+        // getMinutes () : Dakika 0 ile 59 arası
+        // getSeconds ()  Saniye 0 ile 59 arası
+        // getMilliSeconds () :
+        // getUTCFullYear () : Evrensel zaman dilimi (Eş güdümlü evrensel zaman)
+        var zaman = new Date();
+        var yil = zaman.getFullYear();
+        document.write(yil + "<br>");
+
+        // Örnek 2
+        var zamaniki = new Date();
+        var ay = zamaniki.getMonth();
+        if (ay == "8") {
+            var ayadi = "Eylül";
+        }
+        document.write(ayadi + "<br>"); // ilk ay sıfırdan başladığı için değeri 8 olan Eylül yazdırır.
+        // Örnek 3
+        var zamanuc = new Date();
+        var gun = zamanuc.getDate();
+        document.write(gun + "<br>");
+        // Örnek 4
+        var zamandort = new Date();
+        var haftagun = zamandort.getDay(); // (ilk gün pazar ve değeri 0'dır. Çarşamba gününü 3 olarak yazdırır.)
+        if (haftagun == "3") {
+            var haftagunadi = "Çarşamba";
+        }
+        document.write(haftagunadi + "<br>");
+        // Örnek 5
+        var zamanbes = new Date();
+        var saat = zamanbes.getHours();
+        var dakika = zamanbes.getMinutes();
+        var saniye = zamanbes.getSeconds();
+        var msaniye = zamanbes.getMilliseconds();
+        document.write(saat + ":");
+        document.write(dakika + ":");
+        document.write(saniye + ":");
+        document.write(msaniye + "<br>");
+        // Örnek 6
+        var zamanaltı = new Date();
+        var zamandilimi = zamanaltı.getUTCFullYear();
+        var aydilimi = zamanaltı.getUTCMonth();
+        var aygun = zamanaltı.getUTCDate();
+        var saatdilimi = zamanaltı.getUTCHours();
+        var dakikadilimi = zamanaltı.getUTCMinutes();
+        var saniyedilimi = zamanaltı.getUTCSeconds();
+        var msaniyedilimi = zamanaltı.getUTCMilliseconds();
+        document.write(zamandilimi + "<br>");
+        document.write(aydilimi + "<br>");
+        document.write(aygun + "<br>");
+        document.write(saatdilimi + ":"); // şuan ki saatten 3 saat geri gösterir.
+        document.write(dakikadilimi + ":");
+        document.write(saniyedilimi + ":");
+        document.write(msaniyedilimi);
+
+    </script>
+</body>
+
+</html>

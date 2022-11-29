@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* exec () : Kendisine parametre olarak verilen değişken içeriğinde düzenli ifade ile aranan değerin eşleşmesi durumunda
+        eşleşmeyi sağlayan değişken içeriği değerinden yeni dizi oluşturur. */
+        // g ayarı kullanılmazsa RegExp metodu  her çağrıldığında lastindex değeri 0 olan ilk değeri döndürür.
+        var metin = "sara Sara SARA";
+
+        var ifade = new RegExp("sara", "gi");
+
+        var sonuc = ifade.exec(metin); // lastındex değeri 0
+        document.write(sonuc + "<br>");
+
+        var sonuciki = ifade.exec(metin); // lastındex değeri 4
+        document.write(sonuciki + "<br>");
+
+        var sonucuc = ifade.exec(metin); // lastındex değeri 9
+        document.write(sonucuc);
+        document.write(sonucuc[0]);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // Koşul içerisinde koşul kullanılması çok boyutlu olarak adlandırılır.
+
+        var saat = "7";  // string yada number olması farketmiyor ama veri türü kullanıldığında hata veriyor.
+        var veri = typeof saat;
+        if (saat >= 0 && saat <= 5) {
+            if (saat == 0 && veri == "number") {
+                document.write("Günaydın saat şuanda 00:00");
+            } else if (saat == 1) {
+                document.write("Günaydın saat şuanda 01:00");
+            } else if (saat == 2) {
+                document.write("Günaydın saat şuanda 02:00");
+            } else if (saat == 3) {
+                document.write("Günaydın saat şuanda 03:00");
+            } else if (saat == 4) {
+                document.write("Günaydın saat şuanda 04:00");
+            } else if (saat == 5) {
+                document.write("Günaydın saat şuanda 05:00");
+            } else {
+                document.write("Günaydıın ama işlem hatalıı!!");
+            }
+        } else if (saat > 5 && saat < 16) {
+            if (saat == 6 && veri == "number") {
+                document.write("iyi akşamlar saat şuanda 06:00");
+            } else if (saat == 7) {
+                document.write("İyi akşamlar saat şuanda 07:00");
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

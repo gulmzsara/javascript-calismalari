@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // i : Kontrol edilecek değişken içeriğini büyük/küçük harf ayrımı olmaksızın kontrol edilmesini sağlar.
+        // ignoreCase : i ayarının kullanılıp kullanılmadığını boolean veri türünde kontrol ederek sonucu geriye döndürür.
+
+        var metin = "Javascript";
+
+        var ifade = new RegExp("javascript", "i");
+
+        var islem = metin.match(ifade);
+        document.write(islem + "<br>"); // i kullanılmadığında null döndürür.
+
+        // Örnek 2
+
+        var icerik = "Sara sara SARA";
+
+        // var ifadeiki = new RegExp("sara");
+        var ifadeiki = /SARA/ig;
+
+        var sonuc = icerik.match(ifadeiki);
+        document.write(sonuc + "<br>");
+
+        var kontrol = ifadeiki.ignoreCase;
+        document.write(kontrol);
+
+
+
+    </script>
+</body>
+
+</html>

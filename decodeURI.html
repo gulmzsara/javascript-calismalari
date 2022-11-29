@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>utf-8 kodlamasına dönüştürülmüş karakterleri çözme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // decodeURI (): Değişken içerisindeki özel karakterlerin utf-8 kodlamasına dönüştürülmüş karakterleri çözerek geriye döndürürür.
+
+        var deger = "http://www.extrae%C4%9Fitim.com?e%C4%9Fitimsetiadi=Javascript&E%C4%9Fitmen=VolkanAlakent";
+        document.write(deger + "<br>");
+
+        var islem = decodeURI(deger);
+        document.write(islem);
+
+
+
+
+    </script>
+</body>
+
+</html>

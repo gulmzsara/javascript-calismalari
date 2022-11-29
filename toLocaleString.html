@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // toLocaleString () : Değişken içeriğine atanmış olan tarih ve saat bilgilerini tarayıcı locasyonuna/diline dönüştürerek geriye döndürür.
+
+        var zaman = new Date();
+        var zamanturu = typeof zaman;
+        document.write(zamanturu + "<br>");
+        document.write(zaman + "<br>" + "<br>")
+
+        var yenizaman = zaman.toLocaleString();
+        var yenizamanturu = typeof yenizaman;
+        document.write(yenizamanturu + "<br>");
+        document.write(yenizaman);
+
+
+    </script>
+</body>
+
+</html>

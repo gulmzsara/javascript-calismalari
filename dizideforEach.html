@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        /* Kensine parametre olarak verilen fonksiyonu dizideki her elemman üzerinde tek tek çalıştırır.Geriye herhangi bir değer döndürmez.
+        fakat istenilirse gereken değerlere erişebilir. 
+    1.parametre : Her işlemde elde edilen dizi elemanı
+    2.parametre : Her işlemde elde edilen dizi elemanın indisi
+    3.parametre : Tekrarlanan işlem için dizinin atandığı değişkenin referansı */
+
+        function islem(eleman, indis, degisken) {
+            sonuc = sonuc + "çalıştı" + eleman + "<br>"; // dizideki her eleman üzerinde çalıştırır.
+            // sonuc += eleman;  Her elemanı topla
+        }
+        var sonuc = " ";
+        // var sonuc = 0;
+        var sayilar = [10, 2, 4, 56, 12, 5, 34, 6, 23];
+        document.write(sayilar + "<br>");
+
+        sayilar.forEach(islem); // fonksiyana otomatik olarak 3 parametre gönderir.
+        document.write(sonuc);
+
+
+
+    </script>
+</body>
+
+</html>

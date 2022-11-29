@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // getTime () : Değişken içeriğine tarihin zaman bilgisi damgasını depolayarak geriye dödürür.
+        // Zaman damgası başlangıç tarihi 1 Ocak 1970
+        // setTime () : Değişken içeriğine zaman damgasına ait tarih bilgisini depolayarak geriye döndürür.
+
+        var zaman = new Date();
+        document.write(zaman + "<br>");
+        var damga = zaman.getTime();
+        document.write(damga + "<br>"); // 1665529326699
+
+        // Örnek 2
+        var zamaniki = new Date();
+        zamaniki.setTime(1064529851110); // Fri Sep 26 2003 1:44:57 (eksi kullanıldığında 1970 den daha geriye gider zaman damgası kadar)
+        document.write(zamaniki);
+
+
+
+    </script>
+</body>
+
+</html>

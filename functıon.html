@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // function(): Bir isme yada parametrelere sahip olan ifadelere denir. Metot olarakta adlandırılır.
+        // fonksiyon isimleri anlamlı olacak.
+        // fonksiyon isimleri harfler ile başlayabilir. Türkçe karakterler kullanılamaz.
+        // fonksiyon isimleri rakamla başlayamaz.
+        // fonksiyon isimleri hiçbir zaman birden fazla kullanılamaz.
+        // fonksiyon isimleri küçük/büyük harf duyarlıdır.
+        function deneme() {
+            document.write("ilk fonksiyon degeri" + "<br>");
+        }
+        deneme();
+
+        function toplamayap() {
+            var islem = 38 + 23;
+            document.write(islem + "<br>");
+        }
+        toplamayap();
+
+        function cıkarmayap() {
+            var islem = 78 - 34;
+            document.write(islem);
+        }
+        cıkarmayap();
+        // Değişken içerisinde fonksiyon çağırma
+        var deneme = function () {
+            document.write("Merhaba");
+        }
+        deneme();
+    </script>
+</body>
+
+</html>

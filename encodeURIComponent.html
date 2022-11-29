@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Özel karakterleri utf-8 kodlamasına dönüştürme</title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // encodeURIComponent(): Değişken içerisindeki özel karakterleri utf-8 kodlamasına dönüştürerek döndürür.
+        // encodeURI den farkı kullanılan (: // ? =) özel karakter olarak algılanıp utf-8' e dönüştürüyor.
+
+        var deger = "http://www.extraegitim.com?egitimsetiadi=Javascript&Egitmen=VolkanAlakent";
+        document.write(deger + "<br>");
+
+        var islem = encodeURIComponent(deger);
+        document.write(islem);
+
+    </script>
+</body>
+
+</html>

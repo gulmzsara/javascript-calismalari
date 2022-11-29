@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // caller : Fonksiyonu çagıran diğer bir fonksiyon referans alınarak tüm bilgilerin elde edilmesini sağlar.
+
+        function esas() {
+            for (var baslangıc = 0; baslangıc < esas.caller.arguments.length; baslangıc++) {
+                document.write(diger.arguments[baslangıc] + "<br>");
+            }
+        }
+        function diger(isim, soyisim) { // esas() fonksiyonunu çağıran referans olarak alınır.
+            esas();
+        }
+        diger("Sara", "Gülmez");
+
+    </script>
+</body>
+
+</html>

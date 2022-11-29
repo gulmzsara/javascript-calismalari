@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        // search () : Kendisine parametre olarak verilen düzenli ifadeli değer doğrultusunda değişken içeriğini kontrol ederek ilk eşleşmeyi sağlayarak indis değerini döndürür.
+        // lastindex : ilk aranan değerin eşleşmesi durumunda değişken içeriğinin bir sonraki indis değerini geriye döndürür.
+        var metin = "Sara Gülmez";
+
+        var ifade = new RegExp("Gülmez");
+
+        var sonuc = metin.search(ifade);
+        document.write(sonuc + "<br>"); // 5
+
+        // Örnek 2 
+        var icerik = "Dünyada kullanılan en yaygın script dili javascriptir.";
+
+        var ifadeiki = new RegExp("script", "g"); // g kullanılmadığında 0 değerini yazdırır.
+        ifadeiki.test(icerik);
+
+        var islem = ifadeiki.lastIndex;
+        document.write(islem + "<br>"); // 35
+
+        // Örnek 3 ( Birden fazla aynı içerik kullanılmışsa bir sonraki indis  değer için döngü kullanılır.)
+
+        var icerik = "Dünyada kullanılan en yaygın script dili javascriptir.";
+
+        var ifadeiki = new RegExp("script", "g");
+        while (ifadeiki.test(icerik) == true) {
+            var islem = ifadeiki.lastIndex;
+            document.write(islem);
+        }else {
+            document.write("Herhangi bir eşleşme olmadııı!!!");
+        }
+
+
+    </script>
+</body>
+
+</html>

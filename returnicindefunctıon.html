@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+        var kisi = function () {
+            var isimsoyisim = "Sara Gülmez";
+            return isimsoyisim;
+        }
+        var sonuc = kisi();
+        document.write(sonuc)
+
+        // 2. örnek
+        var kisi = function () {
+            var isimsoyisim = "Sara Gülmez";
+            return {
+                isimgetir: function () {
+                    return isimsoyisim;
+                }
+            }
+        }();
+        var sonuc = kisi.isimgetir();
+        document.write(sonuc);
+        // 3. örnek
+
+        var kisi = function () {
+            var isimsoyisim = "Sara Gülmez";
+            return {
+                isimgetir: function () {
+                    return isimsoyisim;
+                },
+                isimdegistir: function (yeniisim) {
+                    isimsoyisim = yeniisim;
+                }
+            }
+        }();
+        kisi.isimdegistir("Deniz Kaya");
+        var sonuc = kisi.isimgetir();
+        document.write(sonuc);
+
+    </script>
+</body>
+
+</html>
