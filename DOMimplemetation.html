@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="islemalani"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // implementation(uygulama) : Belge ile ilgili DOM implementation arayüzünden türetilmiş bir implemetation nesnesini boolean veri türünde deger elde etmek için kullanılır.
+        // Feature : Özellik
+        // Çok gelişmiş javascript yazılımlarında kullanılır.
+
+        var islem = document.implementation;
+        document.getElementById("islemsonucu").innerHTML = islem.hasFeature("HTML", "1.0");// DOM implementiton arayüzünden türetilmiştir.
+
+
+    </script>
+</body>
+
+</html>

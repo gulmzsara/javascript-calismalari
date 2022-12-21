@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    İlgi Alanlarınız : <br>
+    ALışveriş <input name="ilgialanlari" type="checkbox" value="Alısveris">
+    Eğlence <input name="ilgialanlari" type="checkbox" value="Eglence">
+    Sinema <input name="ilgialanlari" type="checkbox" value="Sinema">
+    Tiyatro <input name="ilgialanlari" type="checkbox" value="Tiyatro">
+    Gezi <input name="ilgialanlari" type="checkbox" value="Gezi">
+    İnternet <input name="ilgialanlari" type="checkbox" value="İnternet">
+    <button onclick="secmeislemi()">Hepsini Seç</button>
+    <button onclick="kaldırmaislemi()">Hepsini Kaldır</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        function secmeislemi() {
+            var sonuc = document.getElementsByName("ilgialanlari");
+            for (baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+                sonuc[baslangıc].checked = true;
+            }
+        }
+        function kaldırmaislemi() {
+            var sonuc = document.getElementsByName("ilgialanlari");
+            for (var baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+                sonuc[baslangıc].checked = false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

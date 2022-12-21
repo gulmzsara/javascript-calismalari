@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="ornek">Sara Gülmez</div> <br>
+    <button onclick="deneme()">Buraya Tıklayınız</button>
+
+
+    <script type="text/javascript" lang="javascript">
+
+        /* DOM (document object model)(belge nesne model) : W3C (world wide web consortium)(dünya çapında ağ consorsiyumu) tarafından
+        geliştirilen çok güçlü bir platform olup diilden bağımsız bir programlama arayüzüdür. */
+        /* Browser'lar (tarayıcı) bu arayüzleri kullanarak her bir HTML elemanı için ve diğer özel durumlar için birer object(nesne) oluştururlar.*/
+
+        /*  getElemetById () : Kendisine parametre olarak verilen değer doğrultusunda belge içerisinde verilen Id(benzersiz kimlik tanımalması)
+         özelliğine sahip elemanın referansını elde etmek için kullanılır. */
+
+        // <div> sayfada alan oluşturur.
+        // <span> Satır içi grup oluşturur.
+        // Butona Event (olay) eklendi.
+
+        function deneme() {
+
+            var islem = document.getElementById("ornek").innerHTML = "javascript eğitim seti";
+        }
+
+     // Sara Gülmez (html nesnesine ulaştık)
+    // javascript eğitim seti (Butona tıklandığında içeriğini değiştir)
+
+
+    </script>
+</body>
+
+</html>

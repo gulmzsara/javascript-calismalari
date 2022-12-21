@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        div {
+            border: 2px;
+            border-style: solid;
+            margin: 5;
+            padding: 5;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bicimlendirme">javascript eğitim seti</div>
+    <div class="bicimlendirme">html eğitim seti</div>
+    <div class="bicimlendirme2">css eğitim seti</div>
+    <div class="bicimlendirme">react eğitim seti</div>
+    <p id="islemsonucu"></p>
+    <script type="text/javascript" lang="javascript">
+
+        // getElementByClassName () : Kendisine parametre olarak verilen değer doğrultusunda belge içerisinde belirtilen class adına sahip tüm elemanların referansını elde etmek için kullanılır.
+        // Eleman referansları birden fazla ise her eleman döngü ile elde edilir.
+        // margin : Dış alanlarda bırakılan boşluk
+        // padding: Çerçeve içinde bırakılan boşluk
+        // Arka planı renklendirme (style)
+
+        var sonuc = document.getElementsByClassName("bicimlendirme").length;
+        document.getElementById("islemsonucu").innerHTML = sonuc; // 3
+
+        // Örnek 2
+        var sonuc = document.getElementsByClassName("bicimlendirme2");
+        sonuc[0].style.backgroundColor = "#FIFIFI";
+
+        // Örnek 3 (Döngü ile arkaplanı renklendirme)
+        var sonuc = document.getElementsByClassName("bicimlendirme");
+        for (var baslangıc = 0; baslangıc < sonuc.length; baslangıc++) {
+            sonuc[baslangıc].style.backgroundColor = "#FF0000"; //  kırmızı
+        }
+
+    </script>
+
+</body>
+
+</html>

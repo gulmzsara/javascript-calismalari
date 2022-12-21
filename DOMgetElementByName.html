@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    Ebru'nun en sevdiği hayvan <span name="hayvanadi">kedi</span> dir. Onur'un en sevdiği hayvan <span name="hayvanadi">
+        köpek</span>tir. Ece'nin en sevdiği hayvan <span name="hayvanadi">kurt</span> tur. <br>
+    Hayvan sayısı: <span id="Hayvansayisi"></span> <br>
+    Hayvan : <span id="hayvan"></span> <span id="hayvaniki"></span> <span id="hayvanuc"></span> <br>
+    Etiket: <span id="etiket"></span>
+
+    <script type="text/javascript" lang="javascript">
+
+        // getElementByName () : Kendisine parametre olarak verilen değer doğrultusunda belge içerisinde belirtilen name özelliğine sahip tüm elemanların referansını elde etmek iin kullanılır.
+        // Eleman referansları birden fazla ise her eleman döngü ile elde edilebilir.
+
+        var islem = document.getElementsByName("hayvanadi").length; // Kaç tane hayvanadi geçtiği sayısını verir.
+        document.getElementById("Hayvansayisi").innerHTML = islem; // Hayvan sayısı: 3 olarak yazdırır.
+        // Örnek 2
+
+        var sonuc = document.getElementsByName("hayvanadi");
+        var islem = sonuc[0].innerHTML; // ilkinin içeriği
+        var islemiki = sonuc[1].innerHTML;
+        var islemuc = sonuc[2].innerHTML;
+        document.getElementById("hayvan").innerHTML = islem;
+        document.getElementById("hayvaniki").innerHTML = islemiki;
+        document.getElementById("hayvanuc").innerHTML = islemuc;
+        // Örnek 3 (for döngüsü ile)
+
+        var bilgi = document.getElementsByName("hayvanadi");
+        for (var baslangıc = 0; baslangıc < bilgi.length; baslangıc++) {
+            var sonuc = bilgi[baslangıc].innerHTML;
+            alert(sonuc);
+
+        }
+        // Örnek 4 (dizi ile)
+        var bilgi = document.getElementsByName("hayvanadi");
+        var hayvan = [];
+        for (var baslangıc = 0; baslangıc < bilgi.length; baslangıc++) {
+            var sonuc = bilgi[baslangıc].innerHTML;
+            hayvan[baslangıc] = sonuc;
+        }
+        document.getElementById("Hayvansayisi").innerHTML = hayvan;
+        // Örnek 5 (Hangi tag'da olduğunu bulma)
+        var bilgi = document.getElementsByName("hayvanadi")[0].tagName;
+        document.getElementById("etiket").innerHTML = bilgi;
+
+    </script>
+</body>
+
+</html>

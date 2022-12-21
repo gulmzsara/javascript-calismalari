@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title>Extra Eğitim</title>
+    <base href="https://extraegitim.com/resimler/">
+</head>
+
+<body>
+    <img src="ornek.jpg" alt="">
+    <script type="text/javascript" lang="javascript">
+
+        // baseURI : Belgenin mutlak URL(Unıform Resource Locater) adresi referansını elde etmek için kullanılır.
+        // URL Metodu : Belgenin tam URL adresinin referansını elde etmek için kullanılır.
+        // domain(Alan Adı) Metodu : Belgenin alan adı referansını elde etmek için kullanılır.
+
+        var islem = document.baseURI;
+        document.write(islem); // Bir resim eklendiği zaman base etiketi içerisinde bulunduğu yolu yazıp <img src="isim.jpg"> yazmamız mutlak URI olmuş olur.
+
+        // Örnek 2
+        var sonuc = document.domain;
+        document.write(sonuc); // Localhost veri üzerinden işlem yaptığımız için ekrana birşey yazdırmaz.(domain değeri olmadığından)
+
+    </script>
+</body>
+
+</html>

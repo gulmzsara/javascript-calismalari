@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div>Sara Gülmez</div>
+    <p>Javascript Eğitim Seti</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Php</li> <br>
+        <div id="sonuc"></div>
+    </ul>
+    <script type="text/javascript" lang="javascript">
+
+        // getElementByTagName () : Kendisine parametre olarak verilen değer doğrultusunda belge içerisinde belirtilen tag adına sahip tüm elemanların referansını elde etmek için kullanılır.
+        // Elemanların referansı birden fazla ise her eleman döngü ile elde edilebilir.
+        // Tag olarak "*" kullanıldığında tagın sıra numarasını belirterek içeriğe erişilir.
+
+        var islem = document.getElementsByTagName("li").length; // Kaç tane "li" kullanılmış
+        var islem = document.getElementsByTagName("li")[0].innerHTML; // ilk sıradaki "li" içeriği
+        document.getElementById("sonuc").innerHTML = islem + "<br>";
+
+        // Örnek 2 (Döngü ile birden fazla elemanın referansları)
+        var deger = document.getElementsByTagName("Li");
+        var say = document.getElementsByTagName("Li").length;
+        for (var baslangıc = 0; baslangıc < say; baslangıc++) {
+            document.getElementById("sonuc").innerHTML += deger[baslangıc].innerHTML + "<br>";
+
+        }
+        // Örnek 3 
+        var icerik = document.getElementsByTagName("*");
+        document.getElementById("sonuc").innerHTML = icerik[5].innerHTML;
+    </script>
+</body>
+
+</html>

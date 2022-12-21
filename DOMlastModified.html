@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript" lang="javascript">
+
+        // lastModified : Belgenin son güncelleme tarihini ve saatinin referansını elde etmek için kullanılır.
+
+        var islem = document.lastModified;
+        document.write(islem + "<br>"); // 12/20/2022 16:39:49
+        // Örnek 2
+        var sonuc = document.lastModified;
+        var zaman = new Date(sonuc);
+        document.write(zaman); // Tue Dec 20 2022 16:46:16 GMT+0300 (GMT+03:00) 
+
+    </script>
+</body>
+
+</html>

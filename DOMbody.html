@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+
+</head>
+
+<body>
+    Sara Gülmez
+
+    <button onclick="islem()">Çalıştır</button>
+    <button onclick="boya()">sarı</button>
+    <button onclick="boyaiki()">lacivert</button>
+    <button onclick="boyauc()">siyah</button>
+    <button onclick="boyadort()">beyaz</button>
+    <button onclick="boyabes()">kırmızı</button>
+    <div id="sonucunuz">.....</div>
+    <script type="text/javascript" lang="javascript">
+
+        // body : Belge içerisindeki body tagının referansını elde etmek için kullanılır.
+        // div eklendiğinde butona her basıldığında sadece bir kere yazdırır kopyalama işlemi olmaz.
+        function islem() {
+            var sonuc = document.body.innerHTML; // document nesnesi olduğundan(document) body tagının referansını elde etmek için(body) ve içeriğini yazdırmak için(innerHTML)
+            document.getElementById("sonucunuz").innerHTML = sonuc;
+
+        }
+        // Örnek 2
+        function boya() {
+            document.body.style.backgroundColor = "yellow";
+        }
+        function boyaiki() {
+            document.body.style.backgroundColor = "navy";
+        }
+        function boyauc() {
+            document.body.style.backgroundColor = "black";
+        }
+        function boyadort() {
+            document.body.style.backgroundColor = "white";
+        }
+        function boyabes() {
+            document.body.style.backgroundColor = "red";
+        }
+
+
+    </script>
+</body>
+
+</html>
