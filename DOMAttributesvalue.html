@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="birincikimlik" name="birinciisim" style="border:2px; border-style: solid; border-color: red;">Sara Gülmez
+    </div> <br>
+    <div id="sonucalani"></div> <br>
+    <div id="sonucalaniiki"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // value : Belge içerisindeki html elemanına eklenmiş olan özellik değerinin referansını elde etmek için kullanılır.
+
+        var islem = document.getElementById("birincikimlik").attributes[2].value;
+        document.getElementById("sonucalani").innerHTML = islem;
+
+        // Örnek 2 (While döngüsü ile)
+
+        var deger = document.getElementById("birincikimlik").attributes;
+        var adet = deger.length;
+        var metin = " ";
+        var baslangıc = 0;
+        while (baslangıc < adet) {
+            var sonuc = deger[baslangıc].value;
+            metin += sonuc + "<br>"; // += : ilgili değişkenin içeriğini saklı tutar ve sonradan içerisine ekler.
+            baslangıc++;
+        }
+        document.getElementById("sonucalaniiki").innerHTML = metin;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div class="deneme">Javascript<span class="deneme">Eğitim</span>Seti</div>
+    <div class="iki">CSS</div>
+    <div class="uc">Html</div>
+    <div class="dort">JQUERY</div>
+    <p>Sara Gülmez</p>
+    <p>Sara GüLMEZ</p> <br>
+
+    <span id="sonucalani">...</span> <br>
+    <span id="sonucalaniiki">****</span> <br>
+
+    <button onclick="ornek()">Buraya Tıklayınız!!</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        // CSS seçicileri ile belgedeki eleman veya elemanların referansını elde etmek için kullanılır. Eleman referansları birden fazla ise döngü ile elde edilebilir.
+
+        function ornek() {
+            var islem = document.querySelectorAll("div").length;
+            document.getElementById("sonucalani").innerHTML = "tag adeti :" + islem;
+        }
+        // Örnek 2
+
+        function ornek() {
+            document.querySelectorAll("div")[0].style.backgroundColor = "red";
+            document.querySelectorAll("div")[1].style.backgroundColor = "aqua";
+            document.querySelectorAll("div")[2].style.backgroundColor = "yellow";
+            document.querySelectorAll("div")[3].style.backgroundColor = "blue";
+            document.querySelectorAll("p")[0].style.backgroundColor = "green";
+            document.querySelectorAll("p")[1].style.backgroundColor = "black";
+        }
+        // Örnek 3 (değeri bulma)
+        function ornek() {
+            var sonuc = document.querySelectorAll("div")[0].innerHTML;
+            document.getElementById("sonucalaniiki").innerHTML = sonuc;
+        }
+        // Örnek 3 ( class'lara,id'lere erişim)
+        function ornek() {
+            var icerik = document.querySelectorAll("div.iki")[1].style.fontSize = "25px"; // sırası belirtilmek zorundadır.
+        }
+        // Örnek 4 (Çocuk seçiciler kullanılırsa )
+
+        function ornek() {
+            var secici = document.querySelectorAll(".deneme")[0].innerHTML;
+            document.getElementById("sonucalaniiki").innerHTML = secici; // classı deneme olan tagların hepsini alır.[1] olduğunda alt satıra geçmeyip sıradakini alır.
+
+        }
+        // Örnek 5 (for döngüsü kulanılarak)
+        function ornek() {
+            var sayi = document.querySelectorAll(".deneme").length;
+            for (var baslangıc = 0; baslangıc < sayi; baslangıc++) {
+                document.querySelectorAll(".deneme")[baslangıc].style.backgroundColor = "aqua";
+            }
+        }
+    </script>
+</body>
+
+</html>

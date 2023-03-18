@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .deneme {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Sara GÜLMEZ....</div>
+    <div>Javascript Eğitim Seti</div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // setNamedItem() : Belge içerisindeki html elemanına özellik Node'u ve değeri eklemek için kullanılır.
+
+        var islem = document.getElementsByTagName("div")[0];
+        var ekle = document.createAttribute("style");
+        ekle.value = "color:blue";
+        islem.attributes.setNamedItem(ekle);
+
+        // Örnek 2 
+        var islem = document.getElementsByTagName("div")[1];
+        var ekle = document.createAttribute("class");
+        ekle.value = "deneme";
+        islem.attributes.setNamedItem(ekle);
+
+        // Örnek 3
+
+        var icerik = document.getElementsByTagName("div")[1];
+        var ekle = document.createAttribute("dir");
+        ekle.value = "rtl"; // sağdan sola
+        icerik.attributes.setNamedItem(ekle);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="metinalani" dir="rtl">Javascript Eğitim</div>
+    <!--metin sağdan sola olacak şekildedir.-->
+    <div id="sonucalani"></div>
+
+    <div id="metinalaniiki">Javascript eğitim </div>
+    <!--Metin soldan sağa olacak şekilde-->
+    <script type="text/javascript" lang="javascript">
+
+        // Belge içerisindeki metinlerin yazılış yönü referansını elde etmek için kullanılır. Yazılış yönünün atamasını yapmak içinde kullanılır.
+        // HTML etiketidir.
+
+        var metin = document.getElementById("metinalani").dir;
+        document.getElementById("sonucalani").innerHTML = metin; // dir metodun özelliğini sonucalanına yazdırır.
+
+        // Örnek 2 (Yazılış ataması)
+        document.getElementById("metinalaniiki").dir = "ltr";
+
+
+    </script>
+</body>
+
+</html>

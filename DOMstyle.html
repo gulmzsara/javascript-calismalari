@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .demo {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kimlik" name="isim">Javascript</div>
+    <div id="kimlikiki" name="isimiki" style="font-size:30px ;">CSS</div>
+    <div id="sonucalani"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // style : Belge içerisindeki html elemanına yada elemanlarına CSS özellikleri ve değerleri eklemek veya referansını elde etmek için kullanılır.
+
+        document.getElementById("kimlik").style.backgroundColor = "aqua";
+        document.getElementById("kimlik").style.color = "white";
+        document.getElementById("kimlik").style.border = "5px double blue";
+        document.getElementById("kimlik").style.padding = "5px";
+        document.getElementById("kimlik").style.margin = "5px"; // dış genişlik
+
+        // Örnek 2 (Referans Elde Etme)
+        var referans = document.getElementById("kimlikiki").style.fontSize;
+        var sonuc = "fontsize:" + referans; // 30px
+
+        document.getElementById("sonucalani").innerHTML = sonuc;
+
+        // Örnek 3 (CSS özelliğin referansını elde etmek)
+
+        var islem = document.getElementById("kimlik");
+        var stylebaglan = document.getElementsByTagName("style")[0];
+        document.getElementById("kimlik").innerHTML = stylebaglan.innerHTML; //.demo { background-color: blueviolet;}
+
+        // Örnek 4 (style özelliği ekleme)
+
+        var icerik = document.createElement("style");
+        var dugum = document.createTextNode("body{background-color:green;}");
+        icerik.appendChild(dugum);
+        document.head.appendChild(icerik);
+    </script>
+</body>
+
+</html>

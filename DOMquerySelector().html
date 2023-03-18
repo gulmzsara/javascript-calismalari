@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <p class="birinci">Sara Gülmez</p>
+    <div class="birinci"> Javascript</div>
+    <div class="ikinci">CSS</div>
+    <div class="ucuncu">Html</div>
+    <div class="dorduncu">Php</div>
+    <div id="besinci"></div> <br>
+
+    <div id="bir">Javascript<span id="birbir">Sara Gülmez</span><span id="biriki">Javascript Eğitim</span></div>
+    <div id="iki">CSS<span id="ikibir">Sara Gülmez</span><span id="ikiiki">CSS Eğitim</span></div>
+
+    <button onclick="ornek()">Buradan işlemi Gerçekleştir</button> <br>
+    <button onclick="ornekiki()">İşlem Gerçekleştir</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        // querySelector() : CSS (Cascading Stil Sheets-Basamaklı stil şablonları) seçiciler ile beigedeki bir elemanın referansını elde etmek için kullanılır.
+        // Seçicilere bir class yada id ile erişilebilir. 
+        // Aynı class yada id' ye sahip farklı etiket kullanıldığında ozaman etiket ve değer aynı anda kullanılabilir. ("div.birinci")
+
+        function ornek() {
+            document.querySelector(".birinci").style.fontSize = "20px"; // div.birinci olduğunda javascip olan taga erişir.
+
+        }
+        // Örnek 2 (id ile erişim)
+        function ornekiki() {
+            document.querySelector("#besinci").innerHTML = "React"; // div alanına değer ataması yapıldı.
+        }
+        // Örnek 3 (Çocuk seçicilere nasıl ulaşılır.)
+        document.querySelector("#bir>span").style.fontSize = "20px"; // İlk çocuk seçicisini yakalar.
+        document.querySelector("#iki>span#ikiiki").style.fontSize = "30px";
+        document.querySelector("#bir+div").style.fontSize = "20px"; // id'si bir olan tagdan bir sonra gelen div'i yazdırır.
+
+
+    </script>
+</body>
+
+</html>

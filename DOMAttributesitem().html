@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .deneme {
+            background-color: aqua;
+            border-style: dashed;
+        }
+
+        .demo {
+            border-width: 5px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="kimlik" name="isim" class="deneme">JAVASCRİPT</p>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // item() : Belge içerisindeki html elemanına eklenmiş olan özellik Node'u referansını elde etmek veya ayarlamak için kullanılır.
+
+        var islem = document.getElementById("kimlik");
+        var sonuc = islem.attributes.item(0).name;
+        document.getElementById("sonucalani").innerHTML = sonuc; // id
+
+        // Örnek 2 (Özelliği ayarlamak)
+        var islem = document.getElementById("kimlik");
+        islem.attributes.item(2).value = "demo";
+
+        //Örnek 3(Döngü ile)
+
+        var islem = document.getElementById("kimlik");
+        var adet = document.getElementById("kimlik").attributes.length;
+        var metin = " ";
+        for (var baslangıc = 0; baslangıc < adet; baslangıc++) {
+            var sonucadi = islem.attributes.item(baslangıc).name;
+            var sonucdegeri = islem.attributes.item(baslangıc).value;
+            var sonucmetni = sonucadi + ":" + sonucdegeri + ",";
+            metin += sonucmetni; // (+) kullanılmazsa son değer ve özelliği verir sadece
+        }
+        document.getElementById("sonucalani").innerHTML = metin;
+    </script>
+</body>
+
+</html>

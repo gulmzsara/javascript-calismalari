@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        body {
+            color: blueviolet;
+            font-size: 20px;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+    <style>
+        body {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    Sara Gülmez / Javascript Eğitim Seti <br>
+
+    <script type="text/javascript" lang="javascript">
+
+        // Belge üzerinde etkisi olan tüm style sayfalarının nesne referanslarını elde etmek için kullanılır. style sayfası referansları birden fazla ise her style referansı döngü ile elde edilebilir.
+
+        var islem = document.styleSheets;
+        document.write(islem + "<br>"); // Nesne referansını yazdırıyor. [object styleSheets]
+        // console log(islem) : Nesne değerlerini yazdırıyor. styleSheetList (Kaç tane style etiketi kullanılmış.)
+
+        // Örnek 2
+
+        var icerik = document.styleSheets[0].cssRules[0].cssText;
+        document.write(icerik + "<br>"); // style nesnesi içerisindeki CSS nesnesine erişiyor. [object CSSstyleSheets]
+        // css kodlarına erişiyor.
+
+        // Örnek 3 (Dosya yolu, Mime türü(type))
+
+        var sonuc = document.styleSheets[0].href;
+        document.write(sonuc + "<br>"); // null olur çünkü harici dosya olmadığı için link bağlantı yolu kullanılmıyor.
+
+        var sonuc = document.styleSheets[0].type;
+        document.write(sonuc + "<br>"); // text/css
+
+        // Örnek 4 (for döngüsü kullanılarak)
+        var deger = document.styleSheets[0].cssRules;
+        var sayi = document.styleSheets[0].cssRules.length;
+        var dizi = [];
+        for (var baslangıc = 0; baslangıc < sayi; baslangıc++) {
+            var sonuc = document.styleSheets[0].cssRules[baslangıc].cssText;
+            dizi[baslangıc] = sonuc;
+        }
+
+        document.write(dizi);
+        // Örnek 5 (style türü)
+
+        document.styleSheets[0].cssRules[0].style.backgroundColor = "red";
+
+
+    </script>
+</body>
+
+</html>

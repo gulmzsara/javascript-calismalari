@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="ornek()">Odaklan</button> <br> <br>
+    <a id="baglanti" href="https://www.google.com.tr" target="_blank">Google'a Git</a> <br>
+
+    <div id="metinalani" contenteditable="true">Javascript</div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // focus() : Belge içerisindeki herhangi bir html elemanına odaklanmak için kullanılır.
+        // contenteditable : düzenlenebilir içerik
+
+
+        function ornek() {
+            document.getElementById("baglanti").focus();
+        }
+
+        // Örnek 2 
+        function ornek() {
+            document.getElementById("metinalani").focus();
+        }
+    </script>
+</body>
+
+</html>

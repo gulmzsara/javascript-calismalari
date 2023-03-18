@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <form id="birinciform" name="formbir" action="https://www.extraegitim.com?sonuc.javascript" target="_blank"
+        method="post" accept-charset="utf-8" autocomplete="on" enctype="multipart/form-data" novalidate>
+
+        Ad Soyad : <input type="text" id="birincimetinkutusu" name="metinkutusubir" value="Sara Gülmez">
+        Şehir : <input type="text" id="birincisehirkutusu" name="sehirkutusubir" value="İstanbul">
+        <input type="submit" value="Gönder">
+
+    </form> <br> <br>
+    <form id="ikinciform">
+        Email : <input type="text" id="metinkutusu" name="mailkutusu" value="info@gmail.com">
+        Web Site : <input type="text" id="metinkutusuiki" name="websitekutusu" value="https://www.extraegitim.com">
+
+        <button>Buraya Tıklayınız</button>
+
+
+    </form> <br>
+
+    <div id="sonucalani"></div> <br>
+    <div id="formid"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // forms : Belge içerisindeki form etiketine sahip tüm elemanların referanslarınıelde etmek için kullanılır. Birden fazla ise döngü ile elde edilir.
+        // action : Butona tıklandığında adrese gider.
+        //target : Sayfa yenileme
+        // method : Adres çubuğunda gizli / get : Adres çubuğunda görünür.
+        // accept-charset : Karakter tanımlama
+        // autocomplete : Önceden yazılanı tarayıcı tanımlar.
+        // enctype : Dosya,resim Yükleme işlemleri yapılabilir.
+
+        var islem = document.forms.length;
+        document.getElementById("sonucalani").innerHTML = "Form Sayısı: " + islem;
+        //    Örnek 2
+        var sonuc = document.forms.namedItem("birinciform").innerHTML;
+        document.getElementById("sonucalani").innerHTML = "form kopya :" + sonuc;
+
+        // Örnek 3 (for döngü ile)
+
+        var icerik = document.forms;
+        var uzunluk = document.forms.length;
+        var dizi = []
+        for (var baslangıc = 0; baslangıc < uzunluk; baslangıc++) {
+            var deger = icerik[baslangıc].id; // icerik.elements[baslangıc].id (formun element id'sini yazdırır.)
+            dizi[baslangıc] = deger;
+        }
+        document.getElementById("formid").innerHTML = "form id : " + dizi; 
+    </script>
+</body>
+
+</html>

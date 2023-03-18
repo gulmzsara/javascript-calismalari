@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="ornek" name="test" style="border:2px; border-style: dotted; border-color: red;">Sara GÜLMEZ</div>
+    <div id="sonucalani"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // getNamedItem() : Belge içerisindeki html elemanına eklenmiş olan özellik Node referansını elde etmek için kullanılır.
+
+        var islem = document.getElementsByTagName("div")[0];
+        var sonuc = islem.attributes.getNamedItem("name").value;
+        document.getElementById("sonucalani").innerHTML = sonuc;  // test
+
+    </script>
+</body>
+
+</html>

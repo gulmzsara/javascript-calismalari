@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button id="birincitag" name="birinciisim" class="" style="" onclick=""></button>
+    <br> <br>
+    <div id="sonucalani"></div>
+
+
+    <script type="text/javascript" lang="javascript">
+
+        // length : Belge içerisindeki Html elemanına eklenmiş olan özelliklerin(Attributes) sayısını elde etmek için kullanılır.(id,name,style...)
+
+        var islem = document.getElementById("birincitag").attributes;
+        document.getElementById("sonucalani").innerHTML = islem; // [object NamedNodeMap]
+
+        // Örnek 2
+        var icerik = document.getElementsByTagName("button")[0].attributes;
+        document.getElementById("sonucalani").innerHTML = icerik;
+        // Örnek 3
+        var sonuc = document.getElementsByName("birinciisim")[0].attributes.length; // (istenilen özellik kullanılabilir.)
+        document.getElementById("sonucalani").innerHTML = sonuc; // 5 
+
+    </script>
+</body>
+
+</html>

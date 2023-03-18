@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+
+    <iframe src="DOMadoptNodecerceve.html" style="width:500px; height:500px"></iframe> <br>
+
+    <button onclick="ornek()">Test</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        /*adoptNode() : Belge içerisine başka bir belgeden Node(düğüm) eklemek için kullanılır.Eklenecek olan Node'un
+        varsa tüm alt Node'larıda işleme dahil edilerek ilgili tüm Nodelar diğer belgeden kaldırılır. */
+        // <ifrane> : İç çerçeve oluşturma etiketi
+        // contentWindow : İçerik penceresi (ilgili pencereye bağlantı)
+
+        function ornek() {
+            var cerceve = document.getElementsByTagName("IFRAME")[0];// birden fazla olabileceği için sıra numarası belirtilir.
+            var alan = cerceve.contentWindow.document.getElementsByTagName("DİV")[0];
+            var sonuc = document.adoptNode(alan);
+            document.body.appendChild(); // body elemanını sona ekle. En sonda olmak üzere düğüm ekle.
+        } // Butona tıklandığında ilk div de olanını dışarı alır. İkinci kez tıklandığında kalan düğümüde çeker başa geldği için.
+
+
+    </script>
+</body>
+
+</html>

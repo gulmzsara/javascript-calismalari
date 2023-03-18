@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="birincikimlik" name="birinciisim" style="background-color:red;" class="deneme">Sara GÜLMEZ</div><br>
+    <div id="sonucalani"></div>
+    <div id="sonucalaniiki"></div>
+    <div id="sonucalaniuc"></div>
+    <div id="sonucalanidort"></div>
+
+    <div id="sonucalanibes"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // name : Belge içerisinde Html elemanına eklenmiş olan özellik adı referansını elde etmek için kullanılır.Birden fazla ise döngü ile elde edilebilir.
+
+
+
+        var sonuc = document.getElementById("birincikimlik").attributes[0].name;
+        var sonuciki = document.getElementById("birincikimlik").attributes[1].name;
+        var sonucuc = document.getElementById("birincikimlik").attributes[2].name;
+        var sonucdort = document.getElementById("birincikimlik").attributes[3].name;
+
+        document.getElementById("sonucalani").innerHTML = sonuc;
+        document.getElementById("sonucalaniiki").innerHTML = sonuciki;
+        document.getElementById("sonucalaniuc").innerHTML = sonucuc;
+        document.getElementById("sonucalanidort").innerHTML = sonucdort;
+
+        // Örnek 2 (Döngü ile yapılırsa)
+
+        var islem = document.getElementById("birincikimlik").attributes;
+        var adet = islem.length;
+        var dizi = [];
+        for (var baslangıc = 0; baslangıc < adet; baslangıc++) {
+            var sonuc = document.getElementById("birincikimlik").attributes[baslangıc].name;
+            dizi[baslangıc] = sonuc;
+
+        }
+        document.getElementById("sonucalanibes").innerHTML = dizi;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .demo {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Javascript Eğitim Seti</h2>
+    <h3>CSS Eğitim</h3>
+    <h4>HTML Eğitim</h4> <br>
+    <button onclick="ornek()">Uygula</button> <br> <br>
+
+    Dinleyici : <a id="alan">Sara Gülmez</a> <br> <br>
+    <span id="alaniki">Javascript </span>
+    <script type="text/javascript" lang="javascript">
+
+        // createAttribute () : Belge içerisinde istenilen bir elemana yeni bir özellik/nitelik node'u(Düğüm) olusturur. Oluşturduğu bu node'u bir node obje olarak geriye döndürür.
+        // setAttributeNode : createAttribute metodu ile oluşturulan özellik node'nu node object'ine(Düğüm Nesnesi) uygular.
+        // Html tagına css ile eklenecek özelliği createAtribute kullanarak uygulamak.
+
+        // Örnek 1 (CSS özelliği uygulama)
+        function ornek() {
+            var deger = document.getElementsByTagName("h2")[0];
+            var ozellik = document.createAttribute("class");
+            ozellik.value = "demo";
+            deger.setAttributeNode(ozellik);
+        }
+        // Örnek 2 (Link verme)
+        var icerik = document.getElementById("alan");
+        var islem = document.createAttribute("href");
+        islem.value = "http://www.saragulmez.com";
+        icerik.setAttributeNode(islem);
+        // Örnek 3 
+        var ornek = document.getElementById("alaniki");
+        var yaz = document.createAttribute("title");
+        yaz.value = "Html,Css";
+        ornek.setAttributeNode(yaz);
+    </script>
+</body>
+
+</html>

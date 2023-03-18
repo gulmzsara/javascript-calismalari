@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="ornek()">HTML çıktı akışı</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        // open(): Belge içerisinden yeni bir html çıktı akışı açmak için kullanılır.
+        // close(): Open metoduyla açılan html çıktı akışını kapatmak için kullanılır.
+        // 1.paametre: MimeType
+        // 2.parametre: Geçmiş aktarımı (geçmiş hatırlancakmı hatırlanmıcak mı)
+
+        function ornek() {
+            document.open("text/html", "replace");
+            document.write("<html><head><title>Yeni sayfa başlığı</title></head><body>Javascript</body></html>");
+            // Butona tıklandığında body kısmındaki içerik yazılır ve yeni bir html çıktı akışı açılır.
+            document.close();
+
+        }
+
+    </script>
+</body>
+
+</html>

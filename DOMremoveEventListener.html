@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="sonlandir()">Olay Dinleyicisini Kaldır</button>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // Belgeye andEventListener metoduyla eklenmiş olan evet işaretleyicisini kaldırmak/silmek için kullanılır.
+
+        document.addEventListener("click", ornek);
+        function ornek() {
+            alert("Tıklanma oldu.");
+            document.removeEventListener("click", ornek); // sadece tek tıklanma gerçekleşir.
+        }
+        // Örnek 2 
+
+        document.addEventListener("mousemove", ornekiki);
+        function ornekiki() {
+            document.getElementById("sonucalani").innerHTML = Math.random();
+        }
+        function sonlandir() {
+            document.removeEventListener("mousemove", ornekiki);
+            alert("mousemove oldu");
+
+        }
+
+
+    </script>
+</body>
+
+</html>

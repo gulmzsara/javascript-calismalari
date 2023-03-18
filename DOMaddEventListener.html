@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="sonucalani"></div>
+    <div id="sayialani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // Belgeye event(olay) işaretleyicisi/dinleyicisi eklemek için kullanılır. İşaretlenen event belgede gerçekleşecek olur ise belirtilecek olan fonksiyon veya fonksiyonlar çalışır.
+        // İlk parametreye event, ikinci parametreye fonksiyon yada fonksiyon adı yazılır.
+
+        document.addEventListener("click", function () {
+            alert("Tıklanma Oldu."); // Sayfada herhangi bir yere tıklandığında çalışır.
+        });
+
+        // Örnek 2
+
+        document.addEventListener("click", ornekbir);
+        document.addEventListener("click", ornekiki);
+        document.addEventListener("click", ornekuc);
+        function ornekbir() {
+            alert("Örnekbir için tıklanma oldu");
+        }
+        function ornekiki() {
+            alert("Örnekbir için tıklanma oldu");
+        }
+        function ornekuc() {
+            alert("Örnekbir için tıklanma oldu");
+        }
+        // Örnek 3 (Tüm eventleri birarada kullanma)
+        document.addEventListener("mouseover", ornekbir);
+        document.addEventListener("click", ornekiki);
+        document.addEventListener("mouseout", ornekuc);
+
+        function ornekbir() {
+            document.getElementById("sonucalani").innerHTML += "mouse over oldu  <br>";
+        }
+        function ornekiki() {
+            document.getElementById("sonucalani").innerHTML += "Tıklanma oldu <br>";
+        }
+        function ornekuc() {
+            document.getElementById("sonucalani").innerHTML += "mouse out oldu <br>";
+        }
+        // Örnek 4 (style olayı)
+
+        document.addEventListener("click", renk);
+        function renk() {
+            document.body.style.backgroundColor = "aqua";
+        }
+        // Örnek 5 (Rastgele sayı oluşturma)
+        document.addEventListener("click", sayi);
+        function sayi() {
+            document.getElementById("sayialani").innerHTML = Math.random();
+        }
+
+    </script>
+</body>
+
+</html>

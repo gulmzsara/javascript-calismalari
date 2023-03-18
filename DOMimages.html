@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <img id="bir" src="HTML.png">
+    <img id="iki" src="CSS.png">
+    <img id="uc" src="javascript.png">
+    <div id="sonucalani"></div>
+    <div id="resimdegeri"></div>
+    <div id="resimdegeriiki"></div>
+    <div id="sonuc"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // images : Belge içerisindeki img tagına sahip tüm elemanların referansını elde etmek için kullanılır.
+
+        var islem = document.images.length;
+        document.getElementById("sonucalani").innerHTML = "Kaç tane resim  :" + islem;
+        // Örnek 2
+        var icerik = document.images[0].src;   // document.images.item(0).src aynı sekilde kullanılabilir.
+        document.getElementById("resimdegeri").innerHTML = "src yolu : " + icerik;
+        // Örnek 3
+        var sonuc = document.images.namedItem("iki").src;
+        document.getElementById("resimdegeriiki").innerHTML = "id degerine göre :" + sonuc;
+        // Örnek 4
+        var boyut = document.images[0].width = 100;
+        document.images[0].height = 100;
+        // Örnek 5 (Döngü ile referans elde etme)
+
+        var adet = document.images.length;
+        var metin = "";
+        for (var baslangıc = 0; baslangıc < adet; baslangıc++) {
+            var deger = document.images[baslangıc].src;
+            metin += deger + " & ";
+        }
+        document.getElementById("sonuc").innerHTML = "Dosya yolu:" + metin;
+
+        // Örnek 6 (Değişken,değişken kullanılmadan style)
+        var ornek = document.images[0];
+        ornek.style.border = "2px solid black";
+
+        document.images[1].style.border = "2px dotted red";
+        document.images[2].style.border = "2px solid blue";
+
+
+
+    </script>
+</body>
+
+</html>

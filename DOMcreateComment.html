@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button id="bir" onclick="ornekbir()">Birinci Açıklama Metni</button>
+    <button id="iki" onclick="ornekiki()">İkinci Açıklama Metni</button>
+
+    <script type="text/javascript" lang="javascript">
+
+        // createComment (): Belge içerisine yeni bir belge node'u oluşturur ve oluşturduğu node'u bir node object olarak geriye döndürür.
+        // appendChild (): Bir node'u belirtilecek olan herhangi bir elemanın en sonuna olmak üzere eklemek için kullanılır.
+
+        var hedef = document.createComment("Burası bir açıklama metnidir.");
+        document.body.appendChild(hedef); // Çalışan dosyayı farklı kaydetip vs code ile tekrar açıldığında açıklama metni gözükür.
+        // Örnek 2
+
+        function ornekbir() {
+            var islem = document.createComment("Birinci Açıklama Metni");
+            document.body.appendChild(islem);
+        }
+        function ornekiki() {
+            var islem = document.createComment("İkinci Açıklama Metni");
+            document.body.appendChild(islem);
+        }
+
+    </script>
+</body>
+
+</html>

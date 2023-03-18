@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="deneme">Sara Gülmez</div> <br>
+    <div id="sonucalani"></div>
+    <div id="sonucalaniiki"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // specified : Belge içerisindeki html elemanına herhangi bir özelliğin eklenip eklenmediği referansını boolean veri türünde elde etmek için kullanılır.
+
+        var islem = document.getElementsByTagName("div")[0];
+        var sonuc = islem.getAttributeNode("id").specified; // Özellik düğümü id olan var mı?
+
+        document.getElementById("sonucalani").innerHTML = sonuc; // true
+
+        // 2.yol
+
+        var islem = document.getElementById("deneme").attributes[0].specified;
+        document.getElementById("sonucalani").innerHTML = islem;
+
+    </script>
+</body>
+
+</html>

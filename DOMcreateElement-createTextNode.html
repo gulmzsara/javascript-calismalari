@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="alan">....</div>
+    <div id="alaniki">****</div>
+    <button onclick="ornek()">BAŞLA</button>
+    <script type="text/javascript" lang="javascript">
+
+        // createElement() (Öğe oluştur) : Belge içerisinde yeni bir html eleman node'u(düğümü) oluşturur. Oluşturduğu bu node'u bir node object'i olarak geriye döndürür.
+        // createTextNode() (Metin düğümü oluştur) : createElement metoduyla oluşturulan html elemanına metin node'u oluşturur ve bir node object olarak geriye döndürür.
+        // appendChild() : Bir node'u belirtilecek olan herhangi bir elemanın içerisine en sonda olmak üzere eklemek için kullanılır.
+
+        // Örnek 1 
+        var islem = document.createElement("button");
+        var metin = document.createTextNode("UYGULA");
+        islem.appendChild(metin);
+        document.body.appendChild(islem); // body tagı içerisine birsey yazılmadan buton ve yazı eklendi. (input da eklenebilir.)
+
+        // Örnek 2 (div içeriği ekleme)
+
+        var icerik = document.createElement("div");
+        var sonuc = document.createTextNode("Javascript");
+        icerik.appendChild(sonuc);
+        document.getElementById("alan").appendChild(icerik);
+
+        // Örnek 3 (Fonksiyon içerisine yazma)
+
+        function ornek() {
+            var ekle = document.createElement("div");
+            var yaz = document.createTextNode("Javascript Eğitim Seti");
+            ekle.appendChild(yaz);
+            document.getElementById("alaniki").appendChild(ekle);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

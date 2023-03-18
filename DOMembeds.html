@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <embed id="birinci" name="birincianimasyon" src="yilbasi-agaci-hareketli-resim-0315.gif">
+    <embed id="ikinci" name="ikincianimasyon" src="yilbasi-agaci-hareketli-resim-0315.gif">
+    <div id="sonucalani"></div>
+    <div id="sonucalaniiki"></div>
+    <div id="srcdegerleri"></div>
+    <script type="text/javascript" lang="javascript">
+
+
+        // embeds (yerleştirmeler) : Belge içerisindeki embed veya object tagına sahip elemanların referansını elde etmek için kullanılır.
+        // HTML tagıdır. Kapatma tagı kullanılmazsa da olur.
+        // Elemanlar birden fazla ise döngü ile elde edilebilir.
+
+        var sonuc = document.embeds.length;
+        document.getElementById("sonucalani").innerHTML = "içerik sayısı : " + sonuc;
+
+        // Örnek 2
+        var icerik = document.embeds[0].src; // 2.yol : document.embeds.item(0).src;
+        document.getElementById("sonucalaniiki").innerHTML = "src değeri :" + icerik;
+        // Örnek 3
+        document.embeds[0].height = 100; // yükseklik
+        document.embeds[1].width = 200; // genişlik
+        // Örnek 4 (Döngü ile)
+        var islem = document.embeds;
+        var uzunluk = document.embeds.length;
+        var dizi = []
+        for (var baslangıc = 0; baslangıc < uzunluk; baslangıc++) {
+            var deger = islem[baslangıc].src;
+            dizi[baslangıc] = deger;
+        }
+        document.getElementById("srcdegerleri").innerHTML = dizi; // iki içerik arasındaki virgul diziden geliyor.
+    </script>
+</body>
+
+</html>

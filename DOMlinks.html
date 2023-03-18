@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="ornek()">TIKLAYINIZ ! </button> <br>
+    <a id="bir" href="https://www.extraegitimseti.com/javascript-egitim-seti">javascript eğitim seti</a><br>
+    <a id="iki" href="https://www.extraegitimseti.com/html-egitim-seti">Html eğitim seti</a><br>
+    <a id="uc" href="https://www.extraegitimseti.com/css-egitim-seti">CSS eğitim seti</a> <br><br>
+
+    Link Sayısı : <span id="linksayisialani"></span> <br>
+    Link Yolu : <span id="linkdegeri"></span> <br>
+    Link Değerleri : <span id="linkdegerleri"></span>
+    <script type="text/javascript" lang="javascript">
+
+        // links (bağlantı) : Belge içerisindeki tüm linklerin referansını elde etmek için kullanılır. Birden fazla ise döngü ile elde edilir.
+        // <a> tagına "id" eklenerek nameİtem("") ile baglantı yolunu yazdırabiliriz.
+
+        var islem = document.links.length;
+        document.getElementById("linksayisialani").innerHTML = islem; // 3
+
+        // Örnek 2 (baglantıyı yazdırma)
+        var sonuc = document.links[0].href; // 2.yol : document.links.item(0).href;
+        document.getElementById("linkdegeri").innerHTML = sonuc;
+
+        // Örnek 3 (Buton ekleyerek bağlantı içeriğine style özellikleri ekleme)
+        function ornek() {
+            var icerik = document.links[0].style.border = "1px solid red";
+
+        }
+        // ***  Örnek 4 (Döngü ile tüm elemanlara ulaşma)
+        var islem = document.getElementsByTagName("a");
+        var sonuc = [];
+        var baslangıc = 0;
+        var uzunluk = islem.length;
+        while (baslangıc < uzunluk) {
+            var bilgi = islem[baslangıc].innerHTML; // link yazdırmak istersek islem[baslangıc].href;
+            sonuc[baslangıc] = bilgi;
+            baslangıc++;
+        }
+        document.getElementById("linkdegerleri").innerHTML = sonuc; // javascript eğitim seti,html eğitim seti,css eğitim seti
+        document.getElementById("linkdegerleri").innerHTML = sonuc[0]; // Kaçıncı sıradaki baglantıyı yazdırmak istersek
+    </script>
+</body>
+
+</html>

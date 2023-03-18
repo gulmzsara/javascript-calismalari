@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="sonuc"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // cookie (çerez) : Gelişen yazılım dillerinde olan bir metotdur. Yapısı şu şekildedir ;
+        // 1.cookie adı
+        // 2.cookie değerim
+        // 3.cookie yaşam süresi: Tarayıca kalma süresi. expires kullanılarak zamanı GMT cinsinden belirterek yaşam süresi verilir.
+        // 4.path(yol)
+
+        // Silme işleminde ise çerezadı belirtildikten sonra herhangi bir değer yazılmadan işlem yapılır.
+
+        // cookie adı=cookie değeri; cookie yaşam süresi; path(yol);
+
+        var zaman = new Date();
+        zaman.setMonth(zaman.getMonth() + 1);  // Bu ay ileri atıldı.
+
+        var cerezadi = "isimsoyisim";
+        var cerezdegeri = "SaraGülmez";
+
+        document.cookie = cerezadi + "=" + escape(cerezdegeri) + ";expires=" + zaman.toGMTString() + ";path=/"; // kullanılan escape, türkçe karakteri unicode olarak verir.
+        document.cookie = cerezadi + "=" + cerezdegeri + ";expires=" + zaman.toGMTString() + ";path=/javascript"; // www.extraegitim.com/javascript diye bir sayfa olsaydı sadece orada çalışırdı.dolayısıyla olmayan yol belirttiğimiz için çalışmaz.
+        document.getElementById("sonuc").innerHTML = cerezler;
+
+    </script>
+</body>
+
+</html>

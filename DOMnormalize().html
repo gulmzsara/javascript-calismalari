@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body onload="sayi()">
+    <button onclick="dugum()">Düğüm ekle</button> <button onclick="sayi()">Düğüm sayısı</button> <br>
+    <div id="sayialani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+        // normalize() : Belge içerisindeki boş text düğümleri kaldırarak bitişik düğüme katılmasını sağlar.
+
+
+
+        function dugum() {
+            var islembir = document.createTextNode("yeni düğüm ");
+            var sonucbir = document.body;
+            sonucbir.appendChild(islembir);
+            var islembir = document.getElementById("sayialani");
+            islembir.innerHTML = sonucbir.childNodes.length; //yeni düğüm yeni düğüm yeni düğüm ...
+
+        }
+        function sayi() {
+
+            document.normalize();
+            var islem = document.body;
+            var sonuc = document.getElementById("sayialani");
+            sonuc.innerHTML = islem.childNodes.length; // Eklenen düğümleri div'in içerisine dahil edildikten sonra bitişik düğüme katılır normale döner.(En baştaki düğüm sayısını gösterir/11)
+
+        }
+
+    </script>
+</body>
+
+</html>
