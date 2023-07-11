@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <ul id="liste">
+        <li id="bir">Sara</li>
+        <li id="iki">Ebru</li>
+        <li id="uc">Çağla</li>
+    </ul> 
+    <br> <br>
+    <ol id="listeiki">
+        <li id="dort">paint</li>
+        <li id="bes">photoshop</li>
+        <li id="alti">corel</li>
+    </ol>
+    <br> <br>
+    <button onclick="kopyala()">Uygula</button>
+
+    <script type="text/javascript" lang="javascript">
+
+// cloneNode() : Belge içerisindeki herhangi bir html elemanın içerdiği node'u kopyalamak için kullanılır.
+// parametre olarak true kullanılır.
+
+   function kopyala(){
+
+    var kopyalanacakdugum=document.getElementById("liste").childNodes[1];
+    var kopyala=kopyalanacakdugum.cloneNode(true);
+
+   document.getElementById("listeiki").appendChild(kopyala);
+
+
+   }
+
+   // Örnek 2 (tüm tagı kopyalama)
+
+   function kopyala(){
+
+    var kopyalanacaktag=document.getElementsByTagName("ul")[0];
+    var kopyala=kopyalanacaktag.cloneNode(true);
+
+    document.body.appendChild(kopyala);
+ 
+   }
+
+
+    </script>
+</body>
+
+</html>

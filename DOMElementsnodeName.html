@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content type" content="text/html" />
+    <title></title>
+  </head>
+
+  <body>     <!--Acıklama satırı-->
+    <p id="deneme">Javascript</p>
+    <button onclick="ornek()">Uygula</button> <br /> <br />
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+      // nodeName : Belge içerisindeki herhangi bir node'un adını elde etmek için kullanılır.
+
+      function ornek() {
+        var islem = document.getElementById("deneme").nodeName;
+        document.getElementById("sonucalani").innerHTML = islem;
+      }
+
+
+      // Örnek 2 (body içerisindeki tüm node adlarını bulalım)
+
+      function ornek(){
+        var islem=document.body.childNodes;
+        var uzunluk=islem.length;
+        var metin="";
+        var baslangic;
+         for(baslangic=0; baslangic<uzunluk; baslangic++){
+            metin=metin + islem[baslangic].nodeName +"<br>";
+         }
+         document.getElementById("sonucalani").innerHTML=metin;
+      }
+
+    </script>
+  </body>
+</html>

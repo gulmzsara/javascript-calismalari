@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+
+    <style>
+        .deneme{
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ornek" class="deneme" style="font-size: 30px;" contenteditable="true">Sara Gülmez</div>
+    <div id="sonucalani"></div>
+    <script type="text/javascript" lang="javascript">
+
+// getAttribute() : Belirtilen özelliğin değerini elde etmek için kullanılır.
+// getAttributeNode() : Belirtilen özellik node'un değerini elde etmek ve ayarlamak için kullanılır.
+
+
+   var deger=document.getElementsByTagName("div")[0].getAttribute("contenteditable");
+   document.getElementById("sonucalani").innerHTML=deger; 
+
+   // Örnek 2 
+
+   var dugumdegeri=document.getElementById("ornek").getAttributeNode("class").value;
+   document.getElementById("sonucalani").innerHTML=dugumdegeri;
+
+    </script>
+</body>
+
+</html>

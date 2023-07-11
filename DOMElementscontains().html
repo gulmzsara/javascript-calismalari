@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="alan">
+        <p id="bir">javascript</p>
+        <p id="iki">CSS</p>
+    </div>
+    <br> <br>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// contains () : Belge içerisindeki herhangi bir node'un başka bir node'un alt düğümü olup olmadığını kontrol ederek boolean veri türünde sonucu geriye döndürür.
+
+       document.getElementById("bir");
+       var dugum=document.getElementById("alan").contains(document.getElementById("bir"));
+       document.getElementById("sonucalani").innerHTML=dugum;   // true
+    </script>
+</body>
+
+</html>

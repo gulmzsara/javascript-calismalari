@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .deneme{
+            background-color: blueviolet;
+            height: 20px;
+            width: 120px;
+            padding-left: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-right: 25px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="alan" class="deneme">JAVASCRİPTTT</div> <br> <br>
+    <div id="bir"></div>
+    <div id="iki"></div>
+    <script type="text/javascript" lang="javascript">
+
+// clientWidth : Belge içerisindeki herhangi bir html elemanın içerik genişlik değerini elde etmek için kullanılır.
+// clientHeight : Belge içerisindeki herhangi bir html elemanın içerik yükseklik değerini elde etmek için kullanılır.
+
+/* Hesaplama
+Genişlik : padding-left + genişlik + padding+right
+Yükseklik : padding-top + yükseklik + padding+bottom
+*/ 
+
+    var degerbir=document.getElementById("alan").clientWidth;
+    var degeriki=document.getElementById("alan").clientHeight;
+
+    document.getElementById("bir").innerHTML=degerbir + "px";
+    document.getElementById("iki").innerHTML=degeriki + "px";
+
+
+
+    </script>
+</body>
+
+</html>

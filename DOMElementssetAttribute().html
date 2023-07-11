@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+   
+    <button onclick="ornek()">Uygula</button>  <br> <br>
+
+    <a id="baglanti"  target="_blank">Bağlantiya git</a>
+
+    <input id="deneme" type="text">  <br> <br>
+
+    <script type="text/javascript" lang="javascript">
+
+// setAttribute () : Belge içerisindeki herhangi bir html elemanına belirtilen özelliği ve değerini elde etmek için kullanlır. 
+
+    function ornek(){
+
+        var islem=document.getElementById("baglanti").setAttribute("href","https://www.google.com");
+        var islem=document.getElementById("baglanti").setAttribute("style","color:red");
+
+
+    }
+
+    // Örnek 2 (Form elemanını buton haline getirme)
+
+    function ornek(){
+
+        var form=document.getElementById("deneme").setAttribute("type","button");
+
+    }
+
+    
+ 
+
+
+    </script>
+</body>
+
+</html>

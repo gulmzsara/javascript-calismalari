@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body> 
+    <button onclick="ornek()">Silmek</button> <br> <br>
+    <ol id="liste">
+        <li id="bir">javascript</li>
+        <li id="iki">css</li>
+        <li id="uc">html</li>
+    </ol>
+
+    <script type="text/javascript" lang="javascript">
+
+// removeChiild (): Belge içerisinde herhangi bir html elemanın içerdiği node'u kaldırmak(silmek) için kullanılır.
+
+function ornek(){
+
+    var islem=document.getElementById("liste");
+    islem.removeChild(document.getElementById("bir"));
+}
+
+// Örnek 2 (2. yol)
+
+function ornek(){
+
+    var islem=document.getElementById("liste");
+    islem.removeChild(islem.childNodes[2]);
+
+}
+
+
+    </script>
+</body>
+
+</html>

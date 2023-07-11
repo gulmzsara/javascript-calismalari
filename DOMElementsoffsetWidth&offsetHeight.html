@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+     .ornek{
+        width: 200px;
+        height: 100px;
+        background-color: brown;
+        border: 5px solid yellow;
+        margin-top: 50px;
+        margin-left: 50px;
+     }
+    </style>
+</head>
+
+<body style="margin:0;">
+    <div id="alan" class="ornek"></div> <br>
+    <div id="sonucbir"></div>
+    <div id="sonuciki"></div>
+    <script type="text/javascript" lang="javascript">
+
+// offsetWidth : Belge içerisindeki herhangi bir html elemanın sol üst köşesi ile browser penceresinin sol üst köşesi arasındaki yatay uzaklık farkı değerini elde etmek için kullanılır.
+// offsetHeight : Belge içerisindeki herhangi bir html elemanın sol üst köşesi ile browser penceresinin sol üst köşesi arasındaki dikey uzaklık farkı değerini elde etmek için kullanılır.
+
+/* Toplam genişlik ve yükseklik değeri hesaplama ;
+Genişlik : border-left + padding-left + genişlik + padding-right + border-right
+Yükseklik : border-top + padding-top + yükseklik + padding-bottom + border-bottom 
+*/
+
+
+    var degerbir=document.getElementById("alan").offsetWidth;
+    var degeriki=document.getElementById("alan").offsetHeight;
+
+    document.getElementById("sonucbir").innerHTML=degerbir + "px";
+    document.getElementById("sonuciki").innerHTML=degeriki + "px";
+
+    </script>
+</body>
+
+</html>

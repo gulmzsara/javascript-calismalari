@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="bir">Javascript</div>
+    <div id="sonuca"></div>
+    <div id="sonucb"></div>
+    <script type="text/javascript" lang="javascript">
+
+// id : Belge içerisindeki herhangi bir html elemanının id değerini elde etmek için kullanılır. 
+
+var islem=document.getElementsByTagName("DIV")[0].id;
+document.getElementById("sonuca").innerHTML="ilk ID degeri: "+ islem;  // bir
+
+var degistir=document.getElementsByTagName("DIV")[0].id="iki";
+document.getElementById("sonucb").innerHTML="son ID degeri: "+ degistir;  // iki
+    </script>
+</body>
+
+</html>

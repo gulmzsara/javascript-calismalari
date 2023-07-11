@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="ornek()">Uygula</button> <br> <br>
+    <div id="alan">javascript</div>  <br> <br>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// textContent : Belge içerisindeki herhangi bir node'un text node'ları değerini elde etmek ve ayarlamak için kullanılır.
+
+    function ornek(){
+        
+        var islem=document.getElementById("alan").textContent;
+        document.getElementById("sonucalani").innerHTML=islem;
+
+    }
+    </script>
+</body>
+
+</html>

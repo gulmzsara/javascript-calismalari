@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .bir {
+            color: blue;
+
+        }
+
+        .iki {
+            background-color: yellow;
+        }
+
+        .uc {
+            font-size: 20px;
+            width: 400px;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            border: 5px dotted;
+        }
+
+        .dort {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="ornek()">İşlem yap</button> <br> <br>
+    <div id="alan" class="bir iki uc">Javascript Eğitim</div> <br>
+    <div id="sonuc"></div>
+    <script type="text/javascript" lang="javascript">
+
+        // classList : Belge içerisindeki herhangi bir html elemanına atanmış olan class listesi isimlerini elde etmek veya ayarlamak için kullanılır.
+
+        // item : sınıf seçicisinin adını elde eder.
+        // length: Sınıf seçicisinin sayısını elde eder.
+        // add : Sınıf seçicisini ekler.
+        // remove : Sınıf seçicisini siler(kaldırır)
+        // toggle :Ekler veya kaldırır
+        // contains : Sınıf seçicisi arar.
+
+        function ornek() {
+
+            var deger = document.getElementById("alan").classList;
+            document.getElementById("sonuc").innerHTML = deger;   // bir iki uc
+        }
+        // Örnek 2 (classList ek özellikler)
+
+        var icerik = document.getElementById("alan").classList.item(0);
+        document.getElementById("sonuc").innerHTML = "ilgili elemana 1.class ismi: " + icerik; // bir
+
+        // Örnek 3
+        var sayi = document.getElementById("alan").classList.length;
+        document.getElementById("sonuc").innerHTML = sayi;
+
+        // Örnek 4
+        function ornek() {
+            var ekle = document.getElementById("alan").classList.add("dort");
+        }
+        // Örnek 5
+        var kaldır = document.getElementById("alan").classList.remove("iki");
+
+        // Örnek 6
+        var arama = document.getElementById("alan").classList.contains("bes");
+        document.getElementById("sonuc").innerHTML = arama;  //false
+
+    </script>
+</body>
+
+</html>

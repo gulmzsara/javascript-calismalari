@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <ol>
+        <li id="bir">İstanbul</li><li id="iki">İzmir</li>
+        <li id="uc">Adana</li>
+        <li id="dort">Mersin</li>
+    </ol>
+    <br> <br>
+    <div id="sonuc"></div>
+    <script type="text/javascript" lang="javascript">
+
+// previousSibling : Belge içerisindeki herhangi bir html eleman içerisindeki aynı seviyede yani kardeş olan node'lardan belirtilecek olan node'dan önce gelen ilk node'u elde etmek için kullanılır.
+// Boşlukta bir karakter sayılacağı için dahildir.
+
+ var islem=document.getElementById("iki").previousSibling.innerHTML;
+ document.getElementById("sonuc").innerHTML=islem;
+
+    </script>
+</body>
+
+</html>

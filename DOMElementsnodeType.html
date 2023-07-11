@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="deneme()">Tiklayin</button> <br> <br>
+    <div id="dugumBir"> Javascript <span class="ornek"> Sara </span> Eğitim</div>    <!--HTML AÇIKLAMA ALANI-->
+    <div id="sonucalani"></div>
+    <script type="text/javascript" lang="javascript">
+
+// nodeType : Belge içerisindeki herhangi bir node (düğüm) türünü elde etmek için kullanılır.
+// Browserlar belgedeki her bir eleman içeriği için node oluşturur. Her eleman içeriği ; resim,video,ses dosyası ve metin birer düğüm olarak kabul edilir.
+/*
+1  ELEMENT_NODE (Eleman Düğümü)
+2  ATTRIBUTE_NODE (Özellik Düğümü)
+3  TEXT_NODE (Metin Düğümü)
+4  CDATA_SECTİON_NODE (CDATA Kesit Düğümü)
+5  ENTITY_REFERANCE_NODE (Varlık Referansı Düğümü)
+6  ENTITY_NODE (Varlık Düğümü)
+7  PROCESSING_INSRUCTION_NODE (İşlem Yönergesi Düğümü)
+8  COMMENT_NODE (Açıklama Düğümü)
+9  DOCUMENT_NODE (Doküman /Belge Düğümü)
+10 DOCUMENT_TYPE_NODE (Doküman /Belge Türü Düğümü)
+11 DOCUMENT_FARGMENT_NODE (Doküman / Belge parçası /Bölümü Düğümü)
+12 NOTATION_NODE (Gösterim Düğümü)
+*/
+
+
+
+function deneme(){
+    var islem=document.body.childNodes;   // childNodes : body düğümü içerisindeki tüm alt düğümlerdir.
+    var metin=" ";
+    var baslangic;
+    for(baslangic=0; baslangic<islem.length; baslangic++){
+        metin= metin + islem[baslangic].nodeType +"<br>";     // Her döndüğünde içerik kaybolmasın diye metin=metin+ şeklinde kullanılır.
+    }
+    document.getElementById("sonucalani").innerHTML=metin;   // 3 1 3 1 3 1 3 1 3 8 3 1 3 1 3 (tag ve içeriğe göre isimlendirilir)
+}
+
+// Örnek 2 
+var dugumbul= document.getElementById("dugumBir").nodeType;
+
+if(dugumbul==1){
+
+    document.getElementById("sonucalani").innerHTML= "Düğümün Numara Değeri : "+ dugumbul+ ","+ " Düğümün Açiklamasi: ELEMENT_NODE " ;
+}else if(dugumbul==2){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: ATTRIBUTE_NODE" ;
+}else if(dugumbul==3){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: TEXT_NODE" ;
+}else if(dugumbul==4){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: CDATA_SECTİON_NODE" ;
+}else if(dugumbul==5){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: ENTITY_REFERANCE_NODE" ;
+}else if(dugumbul==6){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: ENTITY_NODE" ;
+}else if(dugumbul==7){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: PROCESSING_INSRUCTION_NODE" ;
+}else if(dugumbul==8){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: COMMENT_NODE" ;
+}else if(dugumbul==9){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: DOCUMENT_NODE " ;
+}else if(dugumbul==10){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: DOCUMENT_TYPE_NODE" ;
+}else if(dugumbul==11){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: DOCUMENT_FARGMENT_NODE" ;
+}else if(dugumbul==12){
+    document.getElementById("sonucalani").innerHTML="Düğümün Numara Değeri : "+ dugumbul + ","+ "Düğümün Açiklamasi: NOTATION_NODE" ;
+}else{
+    document.getElementById("sonucalani").innerHTML="Tanimlanmayan Düğüm";
+}
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body> 
+    <div>
+
+    <p id="ornekbir">javascript</p>
+    <p id="ornekiki">React</p>
+
+    </div>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// parentNode (Üst Düğüm) : Belge içerisindeki herhangi bir html düğümün üst düğümünü elde etmek için kullanılır.
+// Text node'lar ele alınmadığı için boşluk algılanmaz. Sadece değer'li düğümler ele alınır.
+
+    var deger= document.getElementById("ornekbir").parentNode.tagName;
+    document.getElementById("sonucalani").innerHTML=deger;  // DİV
+
+    // Örnek 2
+
+    document.getElementById("ornekiki").parentNode.style.backgroundColor="red";
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+    <style>
+        .bir{
+            color: blueviolet;
+        }
+        .iki{
+            color: yellow;
+            background-color: orchid;
+            border: 4px double black;
+            width: 300px;
+            height: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="ornek()">Tıklayınız</button> <br> <br>
+    <div id="alan" class="bir">Javascriptt</div>
+    <div id="alan2" > class ekle </div>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// className : Belge içerisindeki herhangi bir html elemanının class adını elde etmek için ve ayarlamak için kullanılır.
+
+var bul=document.getElementById("alan").className;
+document.getElementById("sonucalani").innerHTML="Html elemanın class adı : "+ bul;
+
+// Örnek 2 (class değiştirme)
+
+function ornek(){
+    document.getElementById("alan").className="iki";
+}
+
+// Örnek 3 (class ayarlama)
+
+function ornek(){
+    document.getElementById("alan2").className="iki";
+}
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <div id="ozellik">javascript</div>
+    <div>Css</div> 
+    <br> <br>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// hasAttribute() : Belge içerisindeki herhangi bir html elemanın belirtilen özelliğe sahip olup olmadığını kontrol ederek boolean veri türünde değeri geriye döndürür.
+// Html'in Global Özellikleri ; id,class,name,style .. 
+// (): İçerisine hangi global özellik yazılırsa onu kontrol edecek.
+// hasAttributes() : Herhangi bir özelliğe sahip olup olmadığını kontrol ediyor. Herhangi bir özellik belirtmiyoruz.
+
+
+   var islem=document.getElementById("ozellik").hasAttribute("class");
+   document.getElementById("sonucalani").innerHTML=islem;   // false
+
+
+   // Örnek 2 
+   var kontrolet=document.getElementById("ozellik").hasAttribute("id");
+
+   if(kontrolet==true){
+    document.getElementById("sonucalani").innerHTML="Belirttiğiniz özellik html elemaninda bulunmaktadir."
+
+   }else{
+    document.getElementById("sonucalani").innerHTML="Belirttiğiniz özellik html elemaninda bulunmamaktadir."
+    
+   }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="deneme()">Sil</button> <br> <br>
+
+    <a id="baglanti" href="https://www.google.com.tr" target="_blank" >Google'a git</a>
+
+    <script type="text/javascript" lang="javascript">
+
+// removeAttribute () : Belirtilen özelliği kaldırmak için kullanılır.
+// removeAttributeNode() : getAttributeNode() metoduyla belirtilmiş özellik node'nu node nesnesinden kaldırmak/silmek için kullanılır.
+
+   function deneme(){
+
+       var islem=document.getElementById("baglanti").removeAttribute("href");
+
+
+  }
+
+  // Örnek 2
+
+  function deneme(){
+     var deger=document.getElementById("baglanti");
+     var kaldirilacakdugum=deger.getAttributeNode("href");
+
+     deger.removeAttributeNode(kaldirilacakdugum);
+  }
+
+
+
+    </script>
+</body>
+
+</html>

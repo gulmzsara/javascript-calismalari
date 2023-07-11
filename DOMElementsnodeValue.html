@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content type" content="text/html">
+    <title></title>
+</head>
+
+<body>
+    <span id="kimlik">Javascript</span>  <br><br>
+    <button onclick="ornek()">Uygula</button>
+    <div id="sonucalani"></div>
+
+    <script type="text/javascript" lang="javascript">
+
+// nodeValue : Belge içerisindeki herhangi bir node değerini elde etmek için kullanılır.
+
+function ornek(){
+    var islem=document.getElementById("kimlik").childNodes[0].nodeValue;
+   document.getElementById("sonucalani").innerHTML=islem;
+
+}
+
+    </script>
+</body>
+
+</html>
